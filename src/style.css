@@ -1,0 +1,257 @@
+.aquatutor-app-container{
+    font-size: 2em;
+    gap: 5em;
+    min-height: 15ch;
+    padding: 0.5em;
+    display:grid;
+    grid-template-columns: 10em 10em 10em; 
+    max-width: 1500px;
+}
+
+.header{
+    grid-column: 2/4;
+}
+
+.left-navigation{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: #F3F4F6FF;
+}
+
+.middle-section-1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.middle-section-2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.footer-1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.footer-2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.profile-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.search-form{
+    display: flex;
+
+}
+
+.search-form-input{
+    width: 365px; 
+    height: 70px; 
+    font-size: 30px;
+    background: #FFFFFFFF; 
+    border-radius: 25.53191489361702px; 
+    border-width: 2px; 
+    border-color: #194E78FF; /* tertiary1-500 */
+    border-style: solid; 
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; 
+}
+
+.search-form-button{
+    width: 94px; 
+    height: 70px; 
+    font-size: 14px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: #FFFFFFFF; /* white */
+    background: #194E78FF; /* tertiary1-500 */
+    opacity: 1; 
+    border: none; 
+    border-radius: 12px;
+}
+
+.profile-picture{
+    width: 49px; 
+  height: 45px; 
+  background: #DEE1E6FF; /* neutral-300 */
+  border-radius: 50%;
+  margin-left: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding-top: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+li{
+    padding: 20px;
+}
+
+svg{
+    padding: 20px;
+}
+
+
+nav ul li a svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: currentColor; /* Ensures the SVG color matches the text color */
+}
+
+
+nav ul li a.active,
+nav ul li a :hover {
+    background-color: white;
+}
+
+.get-started-button{
+font-family: Lato; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  color: #005174FF; /* tertiary5-800 */
+  background: #56CCFFFF; /* tertiary5-500 */
+  opacity: 1; 
+  border: none; 
+  border-radius: 6px;
+}
+
+.login-button{
+    font-family: Lato; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  color: #FFFFFFFF; /* white */
+  background: #567BFFFF; /* tertiary7-500 */
+  opacity: 1; 
+  border: none; 
+  border-radius: 6px;
+}
+
+.page-navigation{
+    display:flex;
+    justify-content: space-between;
+}
+
+.menstrual-health-button {
+    text-align: center;
+    width: 367px; 
+    height: 437px; 
+    background: #FFFFFFFF; /* white */
+    border-radius: 45px; 
+    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #171a1f; /* shadow-l */
+  }
+
+  .menstrual-health-button :hover{
+    background: #FF66A8FF;
+  }
+
+.water-and-sanitation-button{
+    width: 367px; 
+    height: 437px; 
+    background: #FFFFFFFF; /* white */
+    border-radius: 45px; 
+    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #171a1f; /* shadow-l */
+}
+
+
+main {
+    display:flex;
+    flex-direction: row;
+    background-color: #fff;
+    
+}
+
+.settings-section {
+    margin-left: 70px;
+}
+
+.settings-menu {
+    list-style: none;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.settings-menu li {
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s, border-left 0.3s;
+}
+
+.settings-menu li.active,
+.settings-menu li:hover {
+    color: #005174;
+    border-left: 4px solid #005174;
+    padding-left: 16px;
+}
+
+.settings-content {
+    flex-grow: 1;
+}
+
+.upload-photo,
+.update-information {
+    margin-bottom: 40px;
+}
+
+.upload-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-photo button {
+    padding: 10px 20px;
+    background-color: #005174;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.update-information form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.update-information form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.update-information form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.update-information form button {
+    grid-column: 1 / span 2;
+    padding: 10px 20px;
+    background-color: #005174;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+

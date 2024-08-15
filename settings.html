@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link re="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link 
+  rel="stylesheet" href="src\style.css" />
+
+  <title>Aquatutor</title>
+</head>
+<body>
+    <div class="aquatutor-app-container"> 
+        
+    <div class="header">
+        <form class="search-form" id="search-form">
+            <input type="search" placeholder="" id="search-form-input" class="search-form-input"/>
+            <input type="submit" value="Search" class="search-form-button"/>
+        </form>
+        
+        <div class="profile-navigation">
+            <a href="notifications.html"><img src="src\images\alarm.svg"></a>
+            <a href="profile.html" class="profile-picture"></a>
+        </div>
+    </div>
+    
+    <div class="left-navigation">
+<nav>
+    <ul>
+        <li><a href="index.html" class="active"><img src='src\images\home.svg'>Home</a></li>
+        <li><a href="learn.html" ><img src='src\images\bookmark.svg'>Learn</a></li>
+        <li><a href="community.html"><img src='src\images\handshake.svg'>Community</a></li>
+        <li><a href="about-us.html" ><img src='src\images\yoga.svg'>About Us</a></li>
+        <li><a href="contact-us.html"><img src='src\images\mail.svg'>Contact Us</a></li>
+        <li><a href="settings.html"><img src='src\images\settings.svg'>Settings</a></li>
+
+    </ul>
+</nav>
+</div>
+<main>
+<div class="settings-menu">
+    <ul>
+        <li onclick="showSection('account-settings')">Account Settings</li>
+        <li onclick="showSection('notifications')">Notifications</li>
+        <li onclick="showSection('accessibility')">Accessibility, Display, & Language</li>
+        <li onclick="showSection('password-security')">Password & Security</li>
+    </ul>
+</div>
+<div class="settings-section" id="account-settings">
+    <h2>Account Settings</h2>
+    <div class="update-photo">
+        <label for="upload-photo">Upload a New Photo</label>
+        <input type="file" id="upload-photo">
+        <button>Update</button>
+    </div>
+    <div class="update-information">
+        <form>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name">
+            <label for="email-address">Email Address</label>
+            <input type="email" id="email-address">
+            <label for="address">Address</label>
+            <input type="text" id="address">
+            <label for="city">City</label>
+            <input type="text" id="city">
+            <label for="state">State/Province</label>
+            <input type="text" id="state">
+            <label for="country">Country</label>
+            <input type="text" id="country">
+            <button type="submit">Update Information</button>
+        </form>
+    </div>
+</div>
+<div class="settings-section" id="notifications" style="display:none">
+    <h2>Notifications</h2>
+    <ul class="notification-options">
+        <li>
+            <img src="path/to/filters-icon.svg" alt="Filters Icon">
+            <div>
+                <h4>Filters</h4>
+                <p>Choose the notifications you'd like to see - and those you don't</p>
+            </div>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+        <li>
+            <img src="path/to/preferences-icon.svg" alt="Preferences Icon">
+            <div>
+                <h4>Preferences</h4>
+                <p>Select your preferences by notification type</p>
+            </div>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+    </ul>
+</div>
+<div class="settings-section" id="accessibility" style="display:none">
+    <h2>Accessibility, Display, & Language</h2>
+    <ul class="notification-options">
+        <li>
+            <img src="path/to/accessibility-icon.svg" alt="Accessibility Icon">
+            <div>
+                <h4>Accessibility</h4>
+                <p>Manage aspects of your experience such as limiting colour contrast, motion and text-to-voice options</p>
+            </div>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+        <li>
+            <img src="path/to/display-icon.svg" alt="Display Icon">
+            <div>
+                <h4>Display</h4>
+                <p>Manage your font size, colour, and background</p>
+            </div>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+        <li>
+            <img src="path/to/language-icon.svg" alt="Language Icon">
+            <div>
+                <h4>Languages</h4>
+                <p>Manage which languages you experience our app in</p>
+            </div>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+        <li>
+            <img src="path/to/features-icon.svg" alt="Features Icon">
+            <div>
+                <h4>Features</h4>
+                <p>Manage which features you would like</p>
+            </div>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+    </ul>
+</div>
+<div class="settings-section" id="password-security" style="display:none">
+    <h2>Password & Security</h2>
+    <ul class="notification-options">
+        <li>
+            <img src="src\images\key.svg" alt="Change Password Icon">
+            <div>
+                <h4>Change your password</h4>
+                <p>Change your password at any time</p>
+            </div>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+        <li>
+            <img src="src\images\c-remove.svg" alt="Deactivate your account icon">
+            <h4>Deactivate your account</h4>
+            <p>Find out how you can deactivate your account</p>
+            <img src="src\images\Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+        </li>
+    </ul>
+</div>
+</main>
+</div>
+
+</div>
+<script src="src\script.js"></script>
+</body>
+</html>
