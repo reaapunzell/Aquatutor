@@ -88,7 +88,10 @@
   border-radius: 50%;
   margin-left: 50px;
 }
-
+ 
+.logo{
+    padding-bottom: 50px;
+}
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -144,30 +147,34 @@ font-family: Lato;
 }
 
 .page-navigation{
-    display:flex;
-    justify-content: space-between;
+   display:flex;
+   flex-direction: row;
+   justify-content: space-around;
 }
 
-.menstrual-health-button {
+.page-navigation-button {
     text-align: center;
-    width: 367px; 
-    height: 437px; 
+    margin-left: 50px;
+    width: 400px; 
+    height: 250px; 
     background: #FFFFFFFF; /* white */
     border-radius: 45px; 
-    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #171a1f; /* shadow-l */
+    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #696e76; /* shadow-l */
   }
 
-  .menstrual-health-button :hover{
-    background: #FF66A8FF;
+  .page-navigation-button:hover{
+    background: #52B69AFF;
+    color: white;
   }
-
-.water-and-sanitation-button{
-    width: 367px; 
-    height: 437px; 
+  .meet-the-team-button{
+    text-align: center;
+   
+    width: 400px; 
+    height: 250px; 
     background: #FFFFFFFF; /* white */
     border-radius: 45px; 
-    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #171a1f; /* shadow-l */
-}
+    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #696e76; /* shadow-l */
+  }
 
 
 main {
@@ -255,3 +262,43 @@ main {
     cursor: pointer;
 }
 
+.our-story{
+    grid-column: 2/4;
+}
+
+.about-us-heading{
+    text-align:center;
+    font-family: Lato; /* Body */
+    font-size: 45px; 
+    line-height: 30px; 
+    font-weight: 700; 
+    color: #1A769FFF;
+}
+
+.about-us-heading span{
+    font-family: Lato; /* Body */
+    font-size: 24px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: rgb(4, 56, 78);
+}
+
+.meet-the-team{
+    text-align:center;
+}
+
+.team-bios{
+    display:flex;
+    flex-wrap: wrap;
+}
+.member-bio{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+
+
+.member-bio span{
+    margin-left: 30px;
+}
