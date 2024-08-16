@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link re="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+
+
+  <link 
+  rel="stylesheet" href="src\style.css" />
+
+  <title>Aquatutor</title>
+</head>
+<style>
+ 
+.contact-container {
+    grid-column: 2/4;
+    width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+   
+}
+.contact-us-heading {
+    text-align: center;
+    color: #333;
+}
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-us-form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-us-input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 24px;
+}
+.contact-us-button {
+    padding: 10px 20px;
+    background-color: #2588b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+button:hover {
+    background-color: #12445c;
+}
+
+</style>
+<body>
+    <div class="aquatutor-app-container"> 
+        
+    <div class="header">
+        <form class="search-form" id="search-form">
+            <input type="search" placeholder="" id="search-form-input" class="search-form-input"/>
+            <input type="submit" value="Search" class="search-form-button"/>
+        </form>
+        
+        <div class="profile-navigation">
+            <a href="notifications.html"><img src="src\images\alarm.svg"></a>
+            <a href="profile.html" class="profile-picture"></a>
+        </div>
+    </div>
+    <div class="left-navigation">
+<nav>
+    <img class="logo" src="src\images\Aquatutor logo.png" alt="Aquatutor logo">
+    <ul>
+        <li><a href="index.html"><img src='src\images\home.svg'>Home</a></li>
+        <li><a href="learn.html" ><img src='src\images\bookmark.svg'>Learn</a></li>
+        <li><a href="my-water.html"><img src='src\images\handshake.svg'>My Water</a></li>
+        <li><a href="about-us.html" ><img src='src\images\yoga.svg'>About Us</a></li>
+        <li  class="active"><a href="contact-us.html"><img src='src\images\mail.svg'>Contact Us</a></li>
+        <li><a href="settings.html"><img src='src\images\settings.svg'>Settings</a></li>
+
+    </ul>
+</nav>
+</div>
+
+
+<div class="contact-container">
+<h2> Hi, do you have something you would like us to know?
+    Send us a message by filling in our Contact Us Form Below</h2>
+</h2>
+
+    <h1 class="contact-us-heading">Contact Us</h1>
+    <form class="contact-us-form" action="https://example.com/submit-form" method="POST">
+        <label for="name">Name:</label>
+        <input  class="contact-us-input"type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input class="contact-us-input" type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        
+        <button class="contact-us-button" type="submit">Send Message</button>
+    </form>
+</div>
+</div>
+</body>
+</html>

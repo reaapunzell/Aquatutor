@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Safety and Quality Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #0099cc;
+        }
+        .checklist {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .checklist section {
+            margin-bottom: 20px;
+        }
+        .checklist label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="checklist">
+        <h1>Water Safety and Quality Checklist</h1>
+        
+        <section id="source-of-water">
+            <h2>1. Source of Water</h2>
+            <label><input type="radio" name="source" value="15"> Municipal Water Supply (15 points)</label>
+            <label><input type="radio" name="source" value="10"> Well Water (10 points)</label>
+            <label><input type="radio" name="source" value="5"> Rainwater (5 points)</label>
+            <label><input type="radio" name="source" value="0"> Surface Water (0 points)</label>
+        </section>
+        
+        <section id="filtration-system">
+            <h2>2. Filtration System</h2>
+            <label><input type="radio" name="filtration" value="20"> Advanced Filtration (20 points)</label>
+            <label><input type="radio" name="filtration" value="15"> Standard Filtration (15 points)</label>
+            <label><input type="radio" name="filtration" value="10"> Basic Filtration (10 points)</label>
+            <label><input type="radio" name="filtration" value="0"> No Filtration (0 points)</label>
+        </section>
+        
+        <section id="regular-testing">
+            <h2>3. Regular Testing</h2>
+            <label><input type="radio" name="testing" value="20"> Monthly Testing (20 points)</label>
+            <label><input type="radio" name="testing" value="15"> Quarterly Testing (15 points)</label>
+            <label><input type="radio" name="testing" value="10"> Annual Testing (10 points)</label>
+            <label><input type="radio" name="testing" value="0"> No Testing (0 points)</label>
+        </section>
+        
+        <section id="water-treatment">
+            <h2>4. Water Treatment</h2>
+            <label><input type="radio" name="treatment" value="15"> Chlorination (15 points)</label>
+            <label><input type="radio" name="treatment" value="10"> UV Treatment (10 points)</label>
+            <label><input type="radio" name="treatment" value="5"> Boiling (5 points)</label>
+            <label><input type="radio" name="treatment" value="0"> No Treatment (0 points)</label>
+        </section>
+        
+        <section id="physical-characteristics">
+            <h2>5. Physical Characteristics</h2>
+            <label><input type="radio" name="physical" value="10"> Clear Water (No Cloudiness) (10 points)</label>
+            <label><input type="radio" name="physical" value="5"> Slightly Cloudy (5 points)</label>
+            <label><input type="radio" name="physical" value="0"> Cloudy (0 points)</label>
+        </section>
+        
+        <section id="taste-smell">
+            <h2>6. Taste and Smell</h2>
+            <label><input type="radio" name="taste" value="10"> No Unusual Taste or Smell (10 points)</label>
+            <label><input type="radio" name="taste" value="5"> Slight Unusual Taste or Smell (5 points)</label>
+            <label><input type="radio" name="taste" value="0"> Strong Unusual Taste or Smell (0 points)</label>
+        </section>
+        
+        <section id="plumbing-condition">
+            <h2>7. Plumbing Condition</h2>
+            <label><input type="radio" name="plumbing" value="10"> No Visible Corrosion or Leaks (10 points)</label>
+            <label><input type="radio" name="plumbing" value="5"> Minor Corrosion or Leaks (5 points)</label>
+            <label><input type="radio" name="plumbing" value="0"> Significant Corrosion or Leaks (0 points)</label>
+        </section>
+        
+        <section id="container-cleanliness">
+            <h2>8. Container Cleanliness</h2>
+            <label><input type="radio" name="container" value="10"> Clean and Covered Storage (10 points)</label>
+            <label><input type="radio" name="container" value="5"> Clean but Uncovered Storage (5 points)</label>
+            <label><input type="radio" name="container" value="0"> Dirty Storage (0 points)</label>
+        </section>
+        
+        <button onclick="calculateScore()">Calculate Score</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <footer>
+<a href="my-water.html">Back to Aquatutor Website</a>
+    </footer>
+    
+    <script>
+        function calculateScore() {
+            let totalPoints = 0;
+            const categories = [
+                'source',
+                'filtration',
+                'testing',
+                'treatment',
+                'physical',
+                'taste',
+                'plumbing',
+                'container'
+            ];
+            
+            categories.forEach(category => {
+                const radios = document.querySelectorAll(`input[name="${category}"]:checked`);
+                if (radios.length > 0) {
+                    totalPoints += parseInt(radios[0].value, 10);
+                }
+            });
+            
+            let resultText;
+            if (totalPoints >= 90) {
+                resultText = `Excellent (${totalPoints} points): Your water is very safe to drink.`;
+            } else if (totalPoints >= 70) {
+                resultText = `Good (${totalPoints} points): Your water is generally safe to drink, but improvements can be made.`;
+            } else if (totalPoints >= 50) {
+                resultText = `Fair (${totalPoints} points): Your water may have some safety concerns. Consider improvements.`;
+            } else {
+                resultText = `Poor (${totalPoints} points): Your water is likely unsafe to drink. Immediate action is needed.`;
+            }
+            
+            document.getElementById('result').innerText = resultText;
+        }
+    </script>
+</body>
+</html>

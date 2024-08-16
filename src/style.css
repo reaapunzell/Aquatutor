@@ -1,0 +1,185 @@
+.aquatutor-app-container{
+    font-size: 2em;
+    gap: 5em;
+    min-height: 15ch;
+    padding: 0.5em;
+    display:grid;
+    grid-template-columns: 10em auto 10em; 
+    margin-right:100px;
+}
+
+body{
+    font-family: Lato;
+}
+
+.header{
+    grid-column: 2/4;
+}
+
+.left-navigation{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: #F3F4F6FF;
+}
+
+.middle-section-1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.middle-section-2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.footer-1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.footer-2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.profile-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.search-form{
+    display: flex;
+
+}
+
+.search-form-input{
+    width: 365px; 
+    height: 70px; 
+    font-size: 30px;
+    background: #FFFFFFFF; 
+    border-radius: 25.53191489361702px; 
+    border-width: 2px; 
+    border-color: #194E78FF; /* tertiary1-500 */
+    border-style: solid; 
+    box-shadow: 0px 0px 1px #171a1f, 0px 0px 2px #171a1f; 
+}
+
+.search-form-button{
+    width: 94px; 
+    height: 70px; 
+    font-size: 14px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: #FFFFFFFF; /* white */
+    background: #194E78FF; /* tertiary1-500 */
+    opacity: 1; 
+    border: none; 
+    border-radius: 12px;
+}
+
+.profile-picture{
+    width: 49px; 
+  height: 45px; 
+  background: #DEE1E6FF; /* neutral-300 */
+  border-radius: 50%;
+  margin-left: 50px;
+}
+ 
+.logo{
+    padding-bottom: 50px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding-top: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+li{
+    padding: 20px;
+}
+
+svg{
+    padding: 20px;
+}
+
+
+nav ul li a svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    fill: currentColor; /* Ensures the SVG color matches the text color */
+}
+
+
+nav li.active,
+nav li:hover {
+    background-color: white;
+}
+
+.get-started-button{
+font-family: Lato; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  color: #005174FF; /* tertiary5-800 */
+  background: #56CCFFFF; /* tertiary5-500 */
+  opacity: 1; 
+  border: none; 
+  border-radius: 6px;
+}
+
+.login-button{
+    font-family: Lato; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  color: #FFFFFFFF; /* white */
+  background: #567BFFFF; /* tertiary7-500 */
+  opacity: 1; 
+  border: none; 
+  border-radius: 6px;
+}
+
+.page-navigation{
+   display:flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.page-navigation-button {
+    text-align: center;
+    margin-left: 50px;
+    width: 400px; 
+    height: 250px; 
+    background: #FFFFFFFF; /* white */
+    border-radius: 45px; 
+    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #696e76; /* shadow-l */
+  }
+
+  .page-navigation-button:hover{
+    background: #52B69AFF;
+    color: white;
+  }
+  .meet-the-team-button{
+    text-align: center;
+   
+    width: 400px; 
+    height: 250px; 
+    background: #FFFFFFFF; /* white */
+    border-radius: 45px; 
+    box-shadow: 0px 8px 17px #797e86, 0px 0px 2px #696e76; /* shadow-l */
+  }
+
+
+
+
