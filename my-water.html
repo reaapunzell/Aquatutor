@@ -6,14 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link re="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
-
+  
   <link 
   rel="stylesheet" href="src\style.css" />
 
   <title>Aquatutor</title>
 </head>
+<style>
+
+    body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #0099cc;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.my-water{
+    grid-column: 2/4;
+    max-width:1500px;
+}
+
+a{
+    color: #0a5169;
+}
+
+.water-safety {
+    text-align:center;
+}
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+h2 {
+    color: #0099cc;
+}
+
+
+  </style>
 <body>
     <div class="aquatutor-app-container"> 
         
@@ -34,7 +74,7 @@
     <ul>
         <li><a href="index.html" ><img src='src\images\home.svg'>Home</a></li>
         <li><a href="learn.html" ><img src='src\images\bookmark.svg'>Learn</a></li>
-        <li><a href="my-water.html" class="active"><img src='src\images\handshake.svg'>My Water</a></li>
+        <li class="active"><a href="my-water.html" ><img src='src\images\handshake.svg'>My Water</a></li>
         <li><a href="about-us.html" ><img src='src\images\yoga.svg'>About Us</a></li>
         <li><a href="contact-us.html"><img src='src\images\mail.svg'>Contact Us</a></li>
         <li><a href="settings.html"><img src='src\images\settings.svg'>Settings</a></li>
@@ -42,17 +82,41 @@
     </ul>
 </nav>
 </div>
+
+<div class="my-water">
+<div class="water-safety">
         <h2> Water Safety and Quality</h2>
         <p>Ensuring that the water you drink is safe is crucial for your health. Here's how you can check if your water is safe to drink</p>
-    <ul>
-        <li><strong>Check the Source:</strong> Ensure that the water source is reliable and treated. Avoid drinking from natural sources unless it’s been properly purified.</li>
-            <li><strong>Perform a Visual Inspection:</strong> Look for any cloudiness, particles, or unusual color. Clear water doesn’t always mean it’s safe, but cloudy water is a red flag.</li>
-            <li><strong>Use Water Testing Kits:</strong> Purchase a water testing kit to check for contaminants such as bacteria, lead, and chlorine. These kits are available at most home improvement stores.</li>
-            <li><strong>Smell and Taste:</strong> If the water smells or tastes odd, it may be contaminated. However, some contaminants are undetectable by smell or taste.</li>
-            <li><strong>Boil the Water:</strong> Boiling water for at least one minute can kill most pathogens, but it doesn’t remove chemical contaminants.</li>
-            <li><strong>Consult Local Authorities:</strong> Check with local water authorities for information on water quality and any advisories in your area.</li>
-    </ul>
+        <p>Try this checklist to see if your water is safe to drink</p>
+        <a href="water-safety-checklist.html">Water Safety Checklist</a>
+    </div>
 
+        <section>
+        <h2>Check the Source:</h2>
+        <p>Ensure that the water source is reliable and treated. Avoid drinking from natural sources unless it’s been properly purified.</p>
+    </section>
+    <section>
+            <h2>Perform a Visual Inspection:</h2>
+            <p> Look for any cloudiness, particles, or unusual color. Clear water doesn’t always mean it’s safe, but cloudy water is a red flag.</p>
+        </section>
+        <section>
+            <h2>Use Water Testing Kits:</h2> 
+            <p>Purchase a water testing kit to check for contaminants such as bacteria, lead, and chlorine. These kits are available at most home improvement stores.</p>
+        </section>
+        <section>
+            <h2>Smell and Taste:</h2>
+            <p>If the water smells or tastes odd, it may be contaminated. However, some contaminants are undetectable by smell or taste.</p> 
+        </section>
+        <section>
+            <h2>Boil the Water:</h2>
+            <p>Boiling water for at least one minute can kill most pathogens, but it doesn’t remove chemical contaminants.</p>
+        </section>
+        <section>
+            <h2>Consult Local Authorities:</h2>
+            <p> with local water authorities for information on water quality and any advisories in your area.</p>
+        </section>
+    </div>
 </div>
 </body>
+
 </html>

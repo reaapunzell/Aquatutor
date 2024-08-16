@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link re="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
 
   <link 
@@ -14,6 +13,59 @@
 
   <title>Aquatutor</title>
 </head>
+<style>
+
+    .about-us{
+        grid-column: 2/4;
+
+    }
+      
+    .our-story{
+        margin-bottom: 20px;
+    }
+
+.about-us-heading{
+    text-align:center;
+    font-family: Lato; /* Body */
+    font-size: 45px; 
+    line-height: 30px; 
+    font-weight: 700; 
+    color: #1A769FFF;
+}
+
+.about-us-heading span{
+    font-family: Lato; /* Body */
+    font-size: 30px; 
+    line-height: 22px; 
+    font-weight: 400; 
+    color: rgb(4, 56, 78);
+}
+
+.team-bios{
+    display:flex;
+    justify-content: center;
+}
+
+.meet-the-team{
+    text-align:center;
+    margin-top: 30px;
+}
+
+.team-bios{
+    display:flex;
+    flex-wrap: wrap;
+}
+.member-bio{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.member-bio span{
+    margin-left: 30px;
+}
+
+
+</style>
 <body>
     <div class="aquatutor-app-container"> 
         
@@ -34,15 +86,15 @@
     <ul>
         <li><a href="index.html" ><img src='src\images\home.svg'>Home</a></li>
         <li><a href="learn.html" ><img src='src\images\bookmark.svg'>Learn</a></li>
-        <li><a href="community.html"><img src='src\images\handshake.svg'>Community</a></li>
-        <li><a href="about-us.html" class="active"><img src='src\images\yoga.svg'>About Us</a></li>
+        <li><a href="my-water.html"><img src='src\images\handshake.svg'>My Water</a></li>
+        <li class="active"><a href="about-us.html" ><img src='src\images\yoga.svg'>About Us</a></li>
         <li><a href="contact-us.html"><img src='src\images\mail.svg'>Contact Us</a></li>
         <li><a href="settings.html"><img src='src\images\settings.svg'>Settings</a></li>
 
     </ul>
 </nav>
 </div>
-
+<div class="about-us">
     <div class="our-story">
        <h2 class="about-us-heading">Our Story</h2>
        <span>Aquatutor bridges the gap between technology and public health. By empowering communities, enhancing sanitation, and promoting sustainable water practices, it paves the way for a healthier, more connected world. We believe that Aquatutor has the potential to revolutionize the way we approach sanitation infrastructure management and community engagement, and we look forward to developing this innovative solution at the hackathon.</span>
@@ -56,7 +108,7 @@
         </div>
     </div>
    
-
+<div class="team-bios">
     <div class="footer-1">
         <div class="member-bio">
             <img src="src\images\Rea Image.png">Reatlilwe Maroga 
@@ -78,6 +130,8 @@
             <span>Writer</span>
          </div>
     </div>
+</div>
+</div>
 </div>
 </body>
 </html>
