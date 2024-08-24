@@ -1,6 +1,6 @@
 # Aquatutor
-# Project Story
 
+Built for the GirlCode Hackathon 2024: Harness the power of technology to address pressing global challenges outlined in the United Nations Sustainable Development Goals (SDGs).
 ## About the Project
 
 ### Inspiration
@@ -9,8 +9,16 @@ The project was inspired by the pressing need to address inadequate access to sa
 ### What We Learned
 Through this project, we learned the critical importance of integrating educational content and community engagement into water and sanitation management. We discovered that empowering young women like us requires a holistic approach that combines infrastructure improvements with educational and engagement initiatives.
 
+## Technologies Used
+
+- **HTML5:** For structuring the web page.
+- **CSS3:** For styling the application.
+- **JavaScript:** For making the app interactive and handling API requests.
+- **Git & GitHub:** For version control and code hosting.
+
 ### How We Built the Project
-We developed a comprehensive website and mobile app using React Native for both iOS and Android platforms. The app includes features for sanitation infrastructure management, educational content, and water usage monitoring. Our demo uses basic HTML, CSS, and JavaScript. We plan to further develop the project by incorporating Node.js and Express to build RESTful APIs, and an SQL database to store data on sanitation stations and user feedback.
+We developed a comprehensive website that includes features for educational content, water quality management and period tracking. 
+Our demo uses HTML, CSS, and JavaScript. We plan to further develop the project by incorporating Node.js and Express to build RESTful APIs, and an SQL database to store data on sanitation stations and user feedback.
 
 ### Challenges Faced
 One of the primary challenges was deciding which features to prioritize and how we wanted the app to function. It was difficult to narrow down our focus, but through discussion, we were able to refine our ideas. We anticipate that our biggest challenges will come during the development of the app and the implementation of the desired features.
