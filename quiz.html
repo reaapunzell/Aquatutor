@@ -32,6 +32,53 @@
             padding: 1rem;
             margin-bottom: 2rem;
         }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: horizontal;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav .search-bar {
+            margin-top: 10px;
+        }
+
+        nav .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .horizontal-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
         h1, h2, h3 {
             color: var(--accent-color);
         }
@@ -76,6 +123,22 @@
 </head>
 <body>
     <header>
+        
+            <h1>Learn About Menstrual Health</h1>
+            <nav>
+                    <h1>GirliesHub</h1>
+                    <ul>
+                        <li><a href="purchaseProducts.html" class="btn">Purchase your products</a></li>
+                        <li><a href="#index.html">Home</a></li>
+                        <li><a href="contact-us.html" class="btn">Contact Us</a></li>
+                        <li><a href="about-us.html" class="btn">About Us</a></li>
+                        </li><a href="settings.html" class="btn">Settings</a></li>
+                    </ul>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </nav>
+            
         <h1>Menstrual Health Education</h1>
     </header>
     <div class="container">
@@ -116,7 +179,7 @@
             </ul>
             <p>Remember, everyone's needs are different, so it's important to find what works best for you.</p>
         </div>
-<h2>Learn More</h2></li><a href="learnPeriods.html" class="btn">Continue Learning More About Periods</a></li>
+
         <div class="quiz-section">
             <h2>Engage with Us: Take our Menstrual Health Quiz</h2>
             <p>Test your knowledge about menstrual health and learn more! This quiz covers various aspects of menstrual health, from basic biology to hygiene practices and common myths.</p>
