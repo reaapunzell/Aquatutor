@@ -33,6 +33,71 @@
             padding: 1rem;
             margin-bottom: 2rem;
         }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: horizontal;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav .search-bar {
+            margin-top: 10px;
+        }
+
+        nav .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .horizontal-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
         h1, h2, h3 {
             color: var(--accent-color);
         }
@@ -94,6 +159,27 @@
 </head>
 <body>
     <header>
+        <!-- Navigation -->
+    
+        <nav>
+            <h1>PrincessCare</h1>
+            <ul>
+                <!-- <li><a href="#index.html">Home</a></li> -->
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#featured">Resources</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#news">Updates</a></li>
+               <!-- <li><a href="contact-us.html">Contact</a></li> -->
+                <li><a href="learnPeriods.html" class="btn">Learn More</a></lili>
+                <li><a href="contact-us.html" class="btn">Contact Us</a></li>
+                <li><a href="about-us.html" class="btn">About Us</a></li>
+                </li><a href="setting.html" class="btn">Settings</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+
         <h1>Menstrual Health and Hygiene Products</h1>
     </header>
     <div class="container">
