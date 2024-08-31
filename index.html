@@ -51,7 +51,7 @@
         }
 
         nav ul li a {
-            color: white;
+            color: gray;
             text-decoration: none;
             font-weight: bold;
         }
@@ -88,14 +88,64 @@
             margin-bottom: 1rem;
         }
 
+        .logo{
+            width: 529px; 
+            height: 290px; 
+        }
+
+        .slogan{
+            font-size: 18px;
+
+        }
+
         .hero-content {
             text-align: center;
-            background-color: var(--secondary-color);
             padding: 2rem;
             border-radius: 10px;
             margin-bottom: 2rem;
         }
 
+        .container-princess-hamper{
+            box-shadow: 0px 0px 1px #a8a8a8, 0px 0px 2px #808080; 
+
+        }
+
+            button{
+           height: 36px;
+           padding: 0 12px;
+           font-size:14px;
+           background:#FF69B4FF;
+           color: white;
+           border: none;
+           border-radius: 4px;
+           margin-bottom: 10px;
+           margin-left: 10px;
+           margin-top: 10px;
+        }
+
+        .product-card{
+            margin-left: 10px;
+            width: 191px; 
+            height: 280px; 
+            background: #FFFFFFFF; /* white */
+            border-radius: 4px;
+            border-color: gray;
+            box-shadow: 0px 0px 1px #a8a8a8, 0px 0px 2px #808080; 
+        }
+
+    .product-image{
+        width: 150px; 
+        height: 146px; 
+    }
+
+    .our-products{
+        display:flex;
+    }
+
+    .see-more{
+        background-color: white;
+        color: #FF69B4FF;
+    }
         .cta-buttons {
             margin-top: 1rem;
         }
@@ -173,31 +223,33 @@
 
     <!-- Navigation -->
     <header>
-        <nav>
-            <h1>Menstrual Health Hub</h1>
-            <ul>
-                <!-- <li><a href="#index.html">Home</a></li> -->
-                <li><a href="#introduction">About</a></li>
-                <li><a href="#featured">Resources</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#news">Updates</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="learnPeriods.html" class="btn">Learn More</a></lili>
-                <li><a href="contact-us.html" class="btn">Contact Us</a></li>
-                <li><a href="about-us.html" class="btn">About Us</a></li>
-                </li><a href="setting.html" class="btn">Settings</a></li>
-            </ul>
-            <div class="search-bar">
-                <input type="text" placeholder="Search...">
-            </div>
-        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        
     </header>
+
+    <nav>
+        <h1>Menstrual Health Hub</h1>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="your-cycle.html" class="active">Your Cycle</a></li>
+            <li><a href="about-us.html" class="btn">About Us</a></li>
+            <li><a href="contact-us.html" class="btn">Contact Us</a></li>
+            </li><a href="setting.html" class="btn">Settings</a></li>
+        </ul>
+       
+    </nav>
 
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
-            <h1>Empowering Menstrual Health</h1>
-            <p>Your trusted resource for all things menstrual health and hygiene.</p>
+            <h1>Welcome to</h1>
+            <img class="logo" src="src\images\logo.png" alt="princess-care-logo">
+            <p class="slogan">from one princess to another</p>
+            <br>
+            <p>Improving access to menstrual health products by allowing women (and anyone else) to buy sanitary product hampers for women in need while also purchasing your own sanitary products</p>
             <div class="cta-buttons">
                 <a href="learnPeriods.html" class="btn">Learn More</a>
                 <a href="login.html" class="btn">Get Started</a>
@@ -214,61 +266,46 @@
         </div>
     </section>
 
-    <!-- Featured Sections -->
-    <section id="featured">
-        <div class="container horizontal-sections">
-            <div class="section">
-                <h3>Educational Content</h3>
-                <p>Explore our comprehensive guides and articles on menstrual health.</p>
-            </div>
-            <div class="section">
-                <h3>Products and Reviews</h3>
-                <p>Find the best menstrual products based on user reviews and expert opinions.</p>
-            </div>
-            <div class="section">
-                <h3>Support and Resources</h3>
-                <p>Connect with support groups, helplines, and other valuable resources.</p>
-            </div>
+    <section id="princess-hamper">
+        <div class="container-princess-hamper">
+            <h3>Princess Hamper</h3>
+            <p>When you order one of our products, 
+                a % of your purchase goes towards buying
+                a girl in need a princess hamper</p>
+                <ul>
+                    <li> x 16 Sanitary Pads</li>
+                    <li> x 10 Panty Liners</li>
+                    <li> x 1 100ml Hand Sanitizer</li>
+                    <li> x 3 Reusable Sanitary Pads</li>
+                </ul>
+                <button> Order our Products</button>
+                <button> Donate a Princess Hamper</button>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials">
-        <div class="container horizontal-sections">
-            <div class="section">
-                <h2>User Stories</h2>
-                <div class="testimonial">
-                    <p>"This site helped me understand my body better and choose the right menstrual products for me."</p>
-                    <cite>- Jane Doe</cite>
-                </div>
-            </div>
-            <div class="section">
-                <h2>Expert Endorsements</h2>
-                <div class="testimonial">
-                    <p>"A must-visit site for anyone looking to learn more about menstrual health and hygiene." - Dr. Smith</p>
-                </div>
-            </div>
+    <section id="Our-products">
+        <h2>Our Products</h2>
+        <div class="our-products">
+        <div class="product-card">
+            <img class="product-image" src="src\images\always pad pack.jpeg" alt="Always pad pack">
+            <h3>Product Title</h3>
+            <p>R200</p>
+            <button>Add to cart</button>
         </div>
-    </section>
-
-    <!-- Latest News and Updates -->
-    <section id="news">
-        <div class="container horizontal-sections">
-            <div class="section">
-                <h2>Latest News and Updates</h2>
-                <div class="news-item">
-                    <h3>Recent Blog Post: Understanding Your Menstrual Cycle</h3>
-                    <p>Get insights on how to track your cycle and understand your body's signals.</p>
-                </div>
-            </div>
-            <div class="section">
-                <h2>Upcoming Webinar</h2>
-                <div class="news-item">
-                    <h3>Menstrual Health 101</h3>
-                    <p>Join us for an informative session on menstrual health management. Register now!</p>
-                </div>
-            </div>
+        <div class="product-card">
+            <img class="product-image" src="src\images\always pad pack.jpeg" alt="Always pad pack">
+            <h3>Product Title</h3>
+            <p>R200</p>
+            <button>Add to cart</button>
         </div>
+        <div class="product-card">
+            <img class="product-image" src="src\images\always pad pack.jpeg" alt="Always pad pack">
+            <h3>Product Title</h3>
+            <p>R200</p>
+            <button>Add to cart</button>
+        </div>
+        <button class="see-more">See More</button>
+    </div>
     </section>
 
     <!-- Interactive Elements -->
