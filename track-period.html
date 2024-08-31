@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Health Tracker</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8b3d2;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        section {
+            flex-basis: calc(50% - 1rem);
+            margin-bottom: 2rem;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+        }
+
+        input, select {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff4d94;
+        }
+
+        #prediction {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            section {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body> <header>
+    <h1>Learn About Menstrual Health</h1>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h1>GirliesHub</h1>
+            <ul>
+                <li><a href="#index.html">Home</a></li>
+                <li><a href="#contact-us.html">Contact</a></li>
+                <li><a href="learnPeriods.html" class="btn">Learn More</a></lili>
+                <li><a href="contact-us.html" class="btn">Contact Us</a></li>
+                <li><a href="about-us.html" class="btn">About Us</a></li>
+                </li><a href="setting.html" class="btn">Settings</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+    <header>
+        <h1>Menstrual Health Tracker</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#track-period">Track Period</a></li>
+            <li><a href="#symptoms">Symptoms</a></li>
+            <li><a href="#predict">Predict Next Period</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main>
+            <section id="track-period">
+                <h2>Track Your Period</h2>
+                <form>
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" required>
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date">
+                    <button type="submit">Save</button>
+                </form>
+            </section>
+            <section id="symptoms">
+                <h2>Track Symptoms</h2>
+                <form>
+                    <label for="symptom-date">Date:</label>
+                    <input type="date" id="symptom-date" required>
+                    <label for="symptom-type">Symptom:</label>
+                    <select id="symptom-type" required>
+                        <option value="">Select a symptom</option>
+                        <option value="cramps">Cramps</option>
+                        <option value="headache">Headache</option>
+                        <option value="bloating">Bloating</option>
+                        <option value="fatigue">Fatigue</option>
+                        <option value="mood-swings">Mood Swings</option>
+                    </select>
+                    <label for="symptom-severity">Severity (1-10):</label>
+                    <input type="number" id="symptom-severity" min="1" max="10" required>
+                    <button type="submit">Save Symptom</button>
+                </form>
+            </section>
+            <section id="predict">
+                <h2>Predict Next Period</h2>
+                <form>
+                    <label for="last-period">Last Period Start Date:</label>
+                    <input type="date" id="last-period" required>
+                    <label for="cycle-length">Average Cycle Length (days):</label>
+                    <input type="number" id="cycle-length" min="21" max="35" value="28" required>
+                    <button type="submit">Predict</button>
+                </form>
+                <p id="prediction"></p>
+            </section>
+        </main>
+    </div>
+    <script>
+        // This is where you'd add JavaScript for functionality
+        // For example, handling form submissions and calculations
+        document.querySelector('#predict form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const lastPeriod = new Date(document.getElementById('last-period').value);
+            const cycleLength = parseInt(document.getElementById('cycle-length').value);
+            const nextPeriod = new Date(lastPeriod.getTime() + cycleLength * 24 * 60 * 60 * 1000);
+            document.getElementById('prediction').textContent = `Your next period is predicted to start on ${nextPeriod.toDateString()}.`;
+        });
+    </script>
+</body>
+</html>

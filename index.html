@@ -1,69 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link re="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Menstrual Health</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8b3d2;
+            --text-color: #333;
+            --background-color: #fff;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <link 
-  rel="stylesheet" href="src\style.css" />
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
 
-  <title>Aquatutor</title>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: horizontal;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav .search-bar {
+            margin-top: 10px;
+        }
+
+        nav .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .horizontal-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            margin-top: 1rem;
+        }
+
+        .cta-buttons .btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-buttons .btn:hover {
+            background-color: #d95787;
+        }
+
+        .testimonial, .news-item, .interactive-item {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-section {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        footer form input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        footer form button {
+            padding: 10px 20px;
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        footer form button:hover {
+            background-color: #f8b3d2;
+        }
+
+        #interactive {
+            padding-bottom: 300px;
+        }
+    </style>
 </head>
-<style>
-
-</style>
 <body>
-    <div class="aquatutor-app-container"> 
-        
-    <div class="header">
-        <form class="search-form" id="search-form">
-            <input type="search" placeholder="" id="search-form-input" class="search-form-input"/>
-            <input type="submit" value="Search" class="search-form-button"/>
-        </form>
-        
-        <div class="profile-navigation">
-            <a href="notifications.html"><img src="src\images\alarm.svg"></a>
-            <a href="profile.html" class="profile-picture"></a>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <h1>Menstrual Health Hub</h1>
+            <ul>
+                <!-- <li><a href="#index.html">Home</a></li> -->
+                <li><a href="#introduction">About</a></li>
+                <li><a href="#featured">Resources</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#news">Updates</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="learnPeriods.html" class="btn">Learn More</a></lili>
+                <li><a href="contact-us.html" class="btn">Contact Us</a></li>
+                <li><a href="about-us.html" class="btn">About Us</a></li>
+                </li><a href="setting.html" class="btn">Settings</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Empowering Menstrual Health</h1>
+            <p>Your trusted resource for all things menstrual health and hygiene.</p>
+            <div class="cta-buttons">
+                <a href="learnPeriods.html" class="btn">Learn More</a>
+                <a href="login.html" class="btn">Get Started</a>
+            </div>
         </div>
-    </div>
-    
-    <div class="left-navigation">
-<nav>
-    <img class="logo" src="src\images\Aquatutor logo.png" alt="Aquatutor logo">
-    <ul>
-        <li><a href="index.html" class="active"><img src='src\images\home.svg'>Home</a></li>
-        <li><a href="learn.html" ><img src='src\images\bookmark.svg'>Learn</a></li>
-        <li><a href="my-water.html"><img src='src\images\handshake.svg'>My Water</a></li>
-        <li><a href="about-us.html" ><img src='src\images\yoga.svg'>About Us</a></li>
-        <li><a href="contact-us.html"><img src='src\images\mail.svg'>Contact Us</a></li>
-        <li><a href="settings.html"><img src='src\images\settings.svg'>Settings</a></li>
+    </section>
 
-    </ul>
-</nav>
-</div>
+    <!-- Introduction -->
+    <section id="introduction">
+        <div class="container">
+            <h2>Welcome to Menstrual Health Hub</h2>
+            <p>We aim to educate, support, and empower individuals with knowledge about menstrual health and hygiene.</p>
+            <p>Menstrual health is crucial for overall well-being. We provide resources, articles, and support to help you understand and manage your menstrual health effectively.</p>
+        </div>
+    </section>
 
-<div class="home-page">
-    <h1>Welcome to Aquatutor</h1>
-    <div class="">middle-section-1
-        <h1> LET'S EMPOWER OURSELVES TOWARDS A HEALTHIER FUTURE</h1>
-        <button class="get-started-button">Get Started</button>
-        <button class="login-button">Login</button>
-    </div>
+    <!-- Featured Sections -->
+    <section id="featured">
+        <div class="container horizontal-sections">
+            <div class="section">
+                <h3>Educational Content</h3>
+                <p>Explore our comprehensive guides and articles on menstrual health.</p>
+            </div>
+            <div class="section">
+                <h3>Products and Reviews</h3>
+                <p>Find the best menstrual products based on user reviews and expert opinions.</p>
+            </div>
+            <div class="section">
+                <h3>Support and Resources</h3>
+                <p>Connect with support groups, helplines, and other valuable resources.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="middle-section-2">
-        <img src="src\images\Circles.png" alt="Blue circles arrangment"/>
-    </div>
-    <div class="footer-1">
-        <img src="src\images\Stacked Squares.png" alt="Blue stacked squares" />
-    </div>
-    <div class="footer-2">
-        <p>Our philosophy is to <strong>revolutionise water and sanitation in Africa</strong>, empowering communities, improving health, and promoting gender equality through real-time monitoring, education, and infrastructure enhancement.</p>
-    </div>
-</div>
-</div>
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container horizontal-sections">
+            <div class="section">
+                <h2>User Stories</h2>
+                <div class="testimonial">
+                    <p>"This site helped me understand my body better and choose the right menstrual products for me."</p>
+                    <cite>- Jane Doe</cite>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Expert Endorsements</h2>
+                <div class="testimonial">
+                    <p>"A must-visit site for anyone looking to learn more about menstrual health and hygiene." - Dr. Smith</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News and Updates -->
+    <section id="news">
+        <div class="container horizontal-sections">
+            <div class="section">
+                <h2>Latest News and Updates</h2>
+                <div class="news-item">
+                    <h3>Recent Blog Post: Understanding Your Menstrual Cycle</h3>
+                    <p>Get insights on how to track your cycle and understand your body's signals.</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Upcoming Webinar</h2>
+                <div class="news-item">
+                    <h3>Menstrual Health 101</h3>
+                    <p>Join us for an informative session on menstrual health management. Register now!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Elements -->
+    <section id="interactive">
+        <div class="container horizontal-sections">
+            <div class="section">
+                <h2>Engage with Us</h2>
+                <div class="interactive-item">
+                    <h3>Take our Menstrual Health Quiz</h3>
+                    <p>Test your knowledge about menstrual health and learn more.</p>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Period Tracker</h2>
+                <div class="interactive-item">
+                    <h3>Use Our Period Tracker</h3>
+                    <p>Track your cycle and get personalized tips and reminders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@menstrualhealthhub.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Wellness Street, Health City</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter Signup</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

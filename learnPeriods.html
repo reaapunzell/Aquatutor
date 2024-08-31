@@ -3,185 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQUATUTOR</title>
-    <!--<style>
+    <title>Learn About Menstrual Health</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8b3d2;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        nav {
-            margin: 1rem 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            background: #444;
-            border-radius: 5px;
-            margin: 0 0.5rem;
-        }
-
-        nav a:hover {
-            background: #555;
-        }
-
-        h1, h2 {
-            color: #333;
-            margin-top: 0;
-        }
-
-        h1 {
-            border-bottom: 2px solid #444;
-            padding-bottom: 0.5rem;
-        }
-
-        h2 {
-            margin-top: 1rem;
-            color: #666;
-        }
-
-        p {
-            margin: 0 0 1rem 0;
-            padding: 0 1rem;
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
 
         .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 1rem;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .links {
+       
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: horizontal;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav .search-bar {
+            margin-top: 10px;
+        }
+
+        nav .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .horizontal-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content {
             text-align: center;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
             margin-bottom: 2rem;
         }
 
-        .content {
-            padding: 1rem;
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
         .section {
             margin-bottom: 2rem;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-    </style>-->
+
+        .section-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-content {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .expand-icon::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .section-header.active .expand-icon::after {
+            content: '-';
+        }
+    </style>
+    
+    <!-- Navigation -->
+    
 </head>
 <body>
     <header>
-        <h1>AQUATUTOR LEARNING PLATFORM</h1>
-    </header>
-
-    <nav class="links">
-        <a href="home.html">HOME</a>
-        <a href="login.html">LOGIN</a>
-        <a href="sign-up for free.html">SIGN-UP</a>
-        <a href="learn.html">LEARN PAGE</a>
-        <a href="community.html">COMMUNITY</a>
-        <a href="my water and period.html">MY WATER AND PERIOD</a>
-        <a href="about us.html">ABOUT US</a>
-        <a href="contact us.html">CONTACT US</a>
-    </nav>
-
+        <h1>Learn About Menstrual Health</h1>
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <h1>GirliesHub</h1>
+                <ul>
+                    <li><a href="#index.html">Home</a></li>
+                    <li><a href="#contact-us.html">Contact</a></li>
+                    <li><a href="contact-us.html" class="btn">Contact Us</a></li>
+                    <li><a href="about-us.html" class="btn">About Us</a></li>
+                    </li><a href="setting.html" class="btn">Settings</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </header>
+    
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Empowering Menstrual Health</h1>
+                <p>Your trusted resource for all things menstrual health and hygiene.</p>
+                <div class="cta-buttons">
+                    <!-- <a href="signup.html" class="btn">Sign Up -->
+                    <a href="login.html" class="btn">Get Started</a>
+                </div>
+            </div>
+        </section>
+        </header>
     <div class="container">
-        <div class="content">
-            <h2>Empowering Communities, Enhancing Hygiene!</h2>
-            <p>Aquatutor bridges the gap between technology and public health. By empowering communities, enhancing sanitation, and promoting sustainable water practices, it paves the way for a healthier, more connected world. We believe that Aquatutor has the potential to revolutionize the way we approach sanitation infrastructure management and community engagement, and we look forward to developing this innovative solution at the hackathon.</p>
-
-            <div class="section">
-                <h1>ALL ABOUT PERIODS</h1>
-                <a href="#guidance-section">GUIDANCE ON MENSTRUAL HEALTH AND HYGIENE</a><br>
-                <a href="#menstrual-health">MENSTRUAL HEALTH AND HYGIENE</a><br>
-                <a href="#programme-design">PROGRAMME DESIGN</a><br>
-                <a href="#core-package">CORE PACKAGE OF INTERVENTION</a><br>
+        <section class="section">
+            <div class="section-header">
+                <h2>Introduction to Menstrual Health</h2>
+                <span class="expand-icon"></span>
             </div>
-
-            <div id="guidance-section" class="section">
-                <h1>GUIDANCE ON MENSTRUAL HEALTH AND HYGIENE</h1>
-                <p>Menstruation is a natural fact of life and a monthly occurrence for the 1.8 billion girls, women, transgender men, and non-binary persons of reproductive age.</p>
-                <p>"Throughout this guidance, the term ‘girls and women’ is often used as a stand-in for all menstruators regardless of gender identity. This shorthand is used to increase readability. As part of AquaTutor's commitment to equality and human rights mandate, programmes should be inclusive of transgender and non-binary persons who have menstrual health and hygiene needs."</p>
+            <div class="section-content">
+                <h3>What is Menstruation?</h3>
+                <p>Menstruation is a natural biological process that occurs in most women of reproductive age. It involves the shedding of the uterine lining (endometrium) through the vagina, typically occurring every 21 to 35 days and lasting 2 to 7 days.</p>
+                
+                <h3>Why It Matters</h3>
+                <p>Understanding menstrual health is crucial for several reasons:</p>
+                <ul>
+                    <li>It helps you recognize what's normal and what might be a sign of a health issue.</li>
+                    <li>It enables you to make informed decisions about your reproductive health.</li>
+                    <li>It helps break down stigma and promotes open discussions about women's health.</li>
+                    <li>It empowers you to take control of your overall well-being.</li>
+                </ul>
             </div>
+        </section>
 
-            <div id="menstrual-health" class="section">
-                <h2>1. MENSTRUAL HEALTH AND HYGIENE</h2>
-                <p>#WHAT IS MENSTRUAL HEALTH AND HYGIENE<br>
-                -> The term menstrual hygiene management originated in the WASH sector. After decades of use, there is broad understanding and acknowledgement of this term. Menstrual health builds on this concept and encompasses the broader impacts of the psychological, socio-political, and environmental factors that accompany menstruation on mental, physical, and emotional health.</p>
-                <p>#A GLOBAL GOAL<br>
-                -> Menstrual Health And Hygiene is important for the fulfilment of girls’ and women’s rights, a key objective of the Sustainable Development Goals (SDGs). Women and girls’ access to Menstrual Health And Hygiene is a component of gender-responsive WASH services; SDG 6.2 acknowledges the right to menstrual health and hygiene, with the explicit aim to, “By 2030, achieve access to adequate and equitable sanitation and hygiene for all and end open defecation, paying special attention to the needs of women and girls and those in vulnerable situations.” Without considering needs for safe and dignified menstruation, the world cannot achieve the vision for sanitation and hygiene under Goal 6.</p>
-                <p>#AQUATUTOR'S COMMITMENT<br>
-                -> AquaTutor envisions a world where every girl can learn, play, and safeguard her own health without experiencing stress, shame, or unnecessary barriers to information or supplies during menstruation. AquaTutor’s support to menstrual health and hygiene is aimed at improving outcomes on education, health, and gender equality for girls and women. By comprehensively addressing a range of factors - such as building self-efficacy, developing a positive policy and programme environment, effecting social change, and increasing access to materials and facilities - AquaTutor will continue to support girls and women to have the confidence, knowledge, and skills to manage their menstruation safely, using appropriate materials and facilities, at home and away from the household.</p>
+        <section class="section">
+            <div class="section-header">
+                <h2>The Menstrual Cycle</h2>
+                <span class="expand-icon"></span>
             </div>
+            <div class="section-content">
+                <h3>Phases of the Cycle</h3>
+                <ol>
+                    <li><strong>Menstrual Phase (Days 1-5):</strong> The uterine lining sheds, resulting in menstrual flow.</li>
+                    <li><strong>Follicular Phase (Days 1-13):</strong> The body prepares for possible pregnancy. Follicles in the ovary develop, and one becomes dominant.</li>
+                    <li><strong>Ovulation (Day 14):</strong> The mature egg is released from the ovary.</li>
+                    <li><strong>Luteal Phase (Days 15-28):</strong> The body prepares for possible implantation. If pregnancy doesn't occur, hormone levels drop, leading to the next menstrual phase.</li>
+                </ol>
 
-            <div id="programme-design" class="section">
-                <h2>2. PROGRAMME DESIGN</h2>
-                <p>i. PROGRAMMING PRINCIPLES<br>
-                -> AquaTutor will follow a set of guiding principles to achieve our vision for access to safe and dignified menstruation for all girls and women. These guiding principles ensure that programmes are building on global good practice and lessons learned from previous experiences.</p>
-                <p>#GENDER-EQUALITY:<br>
-                - Menstrual Health And Hygiene programmes reinforce equality between girls and boys.<br>
-                - Women and girls are given opportunities to lead Menstrual Health And Hygiene programmes through participatory approaches to design, implementation, and monitoring.</p>
-                <p>#GOVERNMENT-LED<br>
-                - Technical working groups are led by ministries responsible for education or health, and oversee programme design and implementation.<br>
-                - Menstrual Health And Hygiene programmes align with national strategies and plans in WASH, education, gender, women, youth, health, and other relevant sectors.</p>
-                <p>#INCLUSIVE<br>
-                - Programmes make special efforts to reach and co-design with girls with disabilities, girls from minority groups, transgender or non-binary menstruators.<br>
-                - Programmes engage men and boys.</p>
-                <p>ii. BUILDING THE EVIDENCE BASE<br>
-                -> In most countries, the evidence base for Menstrual Health And Hygiene is limited. Usually, there is a need to generate more and higher-quality evidence on the impact of Menstrual Health And Hygiene on girls’ lives, and the effectiveness of Menstrual Health And Hygiene interventions. Even where previous studies exist on Menstrual Health And Hygiene, information may not be available for specific subpopulations, such as remote geographical areas, specific cultural or religious groups, girls with varying types of disabilities, or transgender boys.</p>
-                <p>#SOCIO-ECOLOGICAL FRAMEWORK FOR FRAMING RESEARCH ON MENSTRUAL HYGIENE MANAGEMENT IN SCHOOLS<br>
-                1. SOCIETAL FACTORS : Policy, Tradition, Cultural Beliefs<br>
-                • Desk review : School/gender WASH policies; curriculum and teacher training standards; reports.<br>
-                • Klls : National and community-level government officials<br>
-                • FGDs and IDLs : Solicitation of norms, beliefs, and local knowledge from girls, boys, teachers, and mothers.</p>
-                <p>2. ENVIRONMENTAL FACTORS : Water, Sanitation And Resource Availability<br>
-                • Observations in schools and communities : WASH conditions; availability and cost of MHM supplies.<br>
-                • KIIs with teachers : Availability of resources and support for WASH; teachers’ role in educating girls.<br>
-                • FGDs with girls : Perceptions of school environment; use of Wash facilities.</p>
-                <p>3. INTERPERSONAL FACTORS : Relationships With Family, Teachers, Peers<br>
-                • FGDs with girls, boys and mothers : Perceptions of changes in gender roles post-menarche; relationships with family, peers, and teachers; access to support for information, practical guidance, and supplies.<br>
-                • KIIs with teachers : Role of teachers in supporting girls; changes in girls’ interactions with others.</p>
-                <p>4. PERSONAL FACTORS : Knowledge, Skills, Beliefs<br>
-                • FGDs and IDIs with girls : Biological knowledge about menstruation and practical knowledge about menstrual hygiene management; coping mechanisms and behavioural adaptations; needs; attitudes and beliefs about menstruation; self-efficacy regarding management.</p>
-                <p>5. BIOLOGICAL FACTORS: Age, Intensity Of Menstruation, Cycle<br>
-                • IDIs with girls : Severity of pain, including headaches and cramps, and influence on behaviour and school experience; intensity of flow and ability to manage menstruation in school setting; weakness, ability to concentrate, fatigue.</p>
+                <h3>Hormonal Changes</h3>
+                <p>The menstrual cycle is regulated by several hormones:</p>
+                <ul>
+                    <li><strong>Estrogen:</strong> Rises during the follicular phase, peaks before ovulation.</li>
+                    <li><strong>Follicle Stimulating Hormone (FSH):</strong> Stimulates follicle growth in the ovaries.</li>
+                    <li><strong>Luteinizing Hormone (LH):</strong> Triggers ovulation.</li>
+                    <li><strong>Progesterone:</strong> Rises after ovulation, preparing the uterus for possible pregnancy.</li>
+                </ul>
             </div>
+        </section>
 
-            <div id="core-package" class="section">
-                <h2>3. CORE PACKAGE OF INTERVENTION</h2>
-                <p>#BUILDING SKILLS AND CAPACITY<br>
-                Menstrual health and hygiene interventions build the skills and capacity of girls and women and their communities, including teachers and service providers. WASH services and supplies provide an entry point, but skills-based approaches, including participatory learning and peer-to-peer education, also play an important role. Evidence-based knowledge of puberty and menstruation is needed to build the skills and confidence of girls and women to manage their menstruation in a healthy way. Boys and men also require knowledge and skills to support their female counterparts, challenge gender inequalities, and contribute to positive social change. This core area ensures that both service providers and clients have the skills and capacity needed to manage menstruation.</p>
-                <p>1. GUIDANCE FOR TEACHERS:<br>
-                -> AquaTutor and partners, working closely with UNICEF, has developed a comprehensive set of guidance materials for teachers. These materials will be used as part of a workshop to help teachers understand menstrual health and hygiene, and how to support students’ needs in a sensitive and age-appropriate manner.<br>
-                -> Menstrual health and hygiene sessions will be integrated into the formal school curriculum and teacher training programmes.<br>
-                -> AquaTutor and partners will also train school counsellors on menstrual health and hygiene, including common myths and misconceptions.</p>
-                <p>2. MHM FACILITY DESIGN:<br>
-                -> The design of school WASH facilities is crucial to ensure that girls can manage their menstruation hygienically and with dignity. Facilities must meet the specific needs of menstruating girls, including privacy, cleanliness, and access to water and soap.<br>
-                -> AquaTutor will support schools in designing, upgrading, or maintaining WASH facilities that are gender-sensitive, child-friendly, and inclusive.<br>
-                -> Gender-segregated latrines and handwashing facilities with soap will be provided in all schools.<br>
-                -> Schools will also have waste management systems in place, including the safe disposal of used menstrual materials.</p>
+        <section class="section">
+            <div class="section-header">
+                <h2>Common Menstrual Issues</h2>
+                <span class="expand-icon"></span>
             </div>
-        </div>
+            <div class="section-content">
+                <h3>Menstrual Disorders</h3>
+                <ul>
+                    <li><strong>Polycystic Ovary Syndrome (PCOS):</strong> A hormonal disorder causing enlarged ovaries with small cysts.</li>
+                    <li><strong>Endometriosis:</strong> A condition where tissue similar to the uterine lining grows outside the uterus.</li>
+                    <li><strong>Amenorrhea:</strong> The absence of menstruation.</li>
+                    <li><strong>Dysmenorrhea:</strong> Severe menstrual cramps and pain.</li>
+                    <li><strong>Menorrhagia:</strong> Abnormally heavy or prolonged menstrual bleeding.</li>
+                </ul>
+
+                <h3>Symptoms and Management</h3>
+                <p>Common symptoms include cramps, bloating, mood swings, and fatigue. Management strategies:</p>
+                <ul>
+                    <li>Over-the-counter pain relievers for cramps</li>
+                    <li>Heat therapy (e.g., hot water bottle) for pain relief</li>
+                    <li>Regular exercise to alleviate symptoms</li>
+                    <li>Dietary changes, such as reducing salt and caffeine intake</li>
+                    <li>Stress-reduction techniques like meditation or yoga</li>
+                    <li>Consult a healthcare provider for persistent or severe symptoms</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Menstrual Products</h2>
+                <span class="expand-icon"></span>
+            </div>
+            <div class="section-content">
+                <h3>Types of Products</h3>
+                <ul>
+                    <li><strong>Pads:</strong> Absorbent products worn in underwear.</li>
+                    <li><strong>Tampons:</strong> Inserted into the vagina to absorb menstrual flow.</li>
+                    <li><strong>Menstrual Cups:</strong> Reusable silicone or rubber cups inserted into the vagina.</li>
+                    <li><strong>Period Underwear:</strong> Absorbent underwear that can be worn alone or as backup.</li>
+                </ul>
+
+                <h3>How to Use Them</h3>
+                <p>General guidelines for menstrual product use:</p>
+                <ul>
+                    <li>Always wash your hands before and after handling menstrual products.</li>
+                    <li>Change pads and tampons every 4-8 hours, or more frequently if flow is heavy.</li>
+                    <li>For tampons, choose the lowest absorbency necessary and never leave in for more than 8 hours.</li>
+                    <li>Menstrual cups can be worn for up to 12 hours, but should be emptied, washed, and rinsed at least twice daily.</li>
+                    <li>Period underwear should be rinsed in cold water after use and then machine washed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Menstrual Health and Lifestyle</h2>
+                <span class="expand-icon"></span>
+            </div>
+            <div class="section-content">
+                <h3>Diet and Nutrition</h3>
+                <p>Certain foods can help alleviate menstrual symptoms:</p>
+                <ul>
+                    <li>Iron-rich foods (lean meats, leafy greens) to replenish iron lost during menstruation</li>
+                    <li>Omega-3 fatty acids (fish, flaxseeds) to reduce inflammation</li>
+                    <li>Calcium-rich foods (dairy, leafy greens) to reduce cramps and mood swings</li>
+                    <li>Water and herbal teas to stay hydrated and reduce bloating</li>
+                </ul>
+
+                <h3>Exercise and Menstruation</h3>
+                <p>Benefits of staying active during your period:</p>
+                <ul>
+                    <li>Reduces cramps and bloating</li>
+                    <li>Boosts mood and reduces stress</li>
+                    <li>Improves sleep quality</li>
+                    <li>Maintains overall health and fitness</li>
+                </ul>
+                <p>Engage in moderate exercises like walking, swimming, or yoga. Listen to your body and adjust intensity as needed.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Mental Health and Menstruation</h2>
+                <span class="expand-icon"></span>
+            </div>
+            <div class="section-content">
+                <h3>Emotional Well-being</h3>
+                <p>Menstruation can affect mood and mental health due to hormonal fluctuations. Common experiences include:</p>
+                <ul>
+                    <li>Mood swings</li>
+                    <li>Irritability</li>
+                    <li>Anxiety</li>
+                    <li>Depression</li>
+                    <li>Difficulty concentrating</li>
+                </ul>
+
+                <h3>Coping Strategies</h3>
+                <p>Tips for managing emotional changes:</p>
+                <ul>
+                    <li>Practice self-care and prioritize rest</li>
+                    <li>Engage in regular exercise</li>
+                    <li>Use relaxation techniques like deep breathing or meditation</li>
+                    <li>Maintain a balanced diet</li>
+                    <li>Stay connected with supportive friends and family</li>
+                    <li>Consider tracking your mood to identify patterns</li>
+                    <li>Consult a healthcare provider if symptoms are severe or disruptive</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Menstrual Health Education</h2>
+                <span class="expand-icon"></span>
+            </div>
+            <div class="section-content">
+                <h3>For Teens</h3>
+                <p>Key information for young girls:</p>
+                <ul>
+                    <li>Menstruation is a normal, healthy part of growing up</li>
+                    <li>Everyone's cycle is unique - there's no "perfect" period</li>
+                    <li>It's okay to talk about periods and ask questions</li>
+                    <li>Proper hygiene is important during menstruation</li>
+                    <li>Track your periods to understand your cycle better</li>
+                </ul>
+
+                <h3>For Parents and Educators</h3>
+                <p>Tips for discussing menstruation:</p>
+                <ul>
+                    <li>Start conversations early and keep them ongoing</li>
+                    <li>Use correct terminology for body parts and processes</li>
+                    <li>Provide accurate, age-appropriate information</li>
+                    <li>Address both the physical and emotional aspects of menstruation</li>
+                    <li>Encourage open dialogue and create a judgment-free environment</li>
+                    <li>Include education for all genders to promote understanding and support</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Cultural Perspectives</h2>
+                <span class="expand-icon"></span>
+            </div>
+            <div class="section-content">
+                <h3>Global Practices</h3>
+                <p>Menstruation is viewed and managed differently across cultures:</p>
+                <ul>
+                    <li>Some cultures celebrate menarche (first menstruation) as a rite of passage</li>
+                    <li>In certain communities, menstruating individuals may face restrictions on daily activities</li>
+                    <li>Access to menstrual products and education varies widely globally</li>
+                    <li>Some cultures have traditional practices or remedies for managing menstruation</li>
+                </ul>
+
+                <h3>Breaking Taboos</h3>
+                <p>Efforts to reduce stigma around menstruation:</p>
+                <ul>
+                    <li>Menstrual health education in schools and communities</li>
+                    <li>Campaigns to increase access to menstrual products</li>
+                    <li>Media representation normalizing menstruation</li>
+                    <li>Policy changes to address "period poverty" and workplace accommodations</li>
+                    <li>Encouraging open conversations about menstruation across genders and generations</li>
+                </ul>
+            </div>
+        </section>
     </div>
 
-    <footer>
-        <address>
-            Email: aquatutor@gmail.com<br>
-            Twitter: @AQUATUTOR<br>
-            Instagram: AQUATUTOR
-        </address>
-    </footer>
+    <script>
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+                header.nextElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
