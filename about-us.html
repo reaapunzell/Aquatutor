@@ -1,137 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link re="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrincessCare - Empowering Menstrual Health</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8b3d2;
+            --text-color: #333;
+            --background-color: #fff;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-  <link 
-  rel="stylesheet" href="src\style.css" />
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
 
-  <title>Aquatutor</title>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        section {
+            flex-basis: calc(50% - 1rem);
+            margin-bottom: 2rem;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            margin-top: 1rem;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #d95787;
+        }
+
+        .team-bios {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .member-bio {
+            text-align: center;
+        }
+
+        .member-bio img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            section {
+                flex-basis: 100%;
+            }
+
+            .team-bios {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<style>
-
-    .about-us{
-        grid-column: 2/4;
-
-    }
-      
-    .our-story{
-        margin-bottom: 20px;
-    }
-
-.about-us-heading{
-    text-align:center;
-    font-family: Lato; /* Body */
-    font-size: 45px; 
-    line-height: 30px; 
-    font-weight: 700; 
-    color: #1A769FFF;
-}
-
-.about-us-heading span{
-    font-family: Lato; /* Body */
-    font-size: 30px; 
-    line-height: 22px; 
-    font-weight: 400; 
-    color: rgb(4, 56, 78);
-}
-
-.team-bios{
-    display:flex;
-    justify-content: center;
-}
-
-.meet-the-team{
-    text-align:center;
-    margin-top: 30px;
-}
-
-.team-bios{
-    display:flex;
-    flex-wrap: wrap;
-}
-.member-bio{
-    display:flex;
-    align-items:center;
-    justify-content: space-evenly;
-}
-.member-bio span{
-    margin-left: 30px;
-}
-
-
-</style>
 <body>
-    <div class="aquatutor-app-container"> 
-        
-    <div class="header">
-        <form class="search-form" id="search-form">
-            <input type="search" placeholder="" id="search-form-input" class="search-form-input"/>
-            <input type="submit" value="Search" class="search-form-button"/>
-        </form>
-        
-        <div class="profile-navigation">
-            <a href="notifications.html"><img src="src\images\alarm.svg"></a>
-            <a href="profile.html" class="profile-picture"></a>
-        </div>
-    </div>
-    <div class="left-navigation">
-<nav>
-    <img class="logo" src="src\images\Aquatutor logo.png" alt="Aquatutor logo">
-    <ul>
-        <li><a href="index.html" ><img src='src\images\home.svg'>Home</a></li>
-        <li><a href="learn.html" ><img src='src\images\bookmark.svg'>Learn</a></li>
-        <li><a href="my-water.html"><img src='src\images\handshake.svg'>My Water</a></li>
-        <li class="active"><a href="about-us.html" ><img src='src\images\yoga.svg'>About Us</a></li>
-        <li><a href="contact-us.html"><img src='src\images\mail.svg'>Contact Us</a></li>
-        <li><a href="settings.html"><img src='src\images\settings.svg'>Settings</a></li>
+    <header>
+        <nav>
+            <h1>PrincessCare</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learnPeriods.html">Learning About Periods</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+        </nav>
+    </header>
 
-    </ul>
-</nav>
-</div>
-<div class="about-us">
-    <div class="our-story">
-       <h2 class="about-us-heading">Our Story</h2>
-       <span>Aquatutor bridges the gap between technology and public health. By empowering communities, enhancing sanitation, and promoting sustainable water practices, it paves the way for a healthier, more connected world. We believe that Aquatutor has the potential to revolutionize the way we approach sanitation infrastructure management and community engagement, and we look forward to developing this innovative solution at the hackathon.</span>
+                <section id="about-us">
+                <h2>About Us</h2>
+                <p>PrincessCare is dedicated to improving menstrual health awareness and providing accessible care. Learn more about our mission and team.</p>
+                <div class="team-bios">
+                    <div class="member-bio">
+                        <img src="src/images/Rea Image.png" alt="Reatlilwe Maroga">
+                        <h3>Reatlilwe Maroga</h3>
+                        <p>Project Manager</p>
+                    </div>
+                    <div class="member-bio">
+                        <img src="src/images/Tsholofelo Image.png" alt="Tsholofelo Sekome">
+                        <h3>Tsholofelo Sekome</h3>
+                        <p>Developer</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
-    <div class="meet-the-team">
-        <h2 class="about-us-heading">Meet the Team</h2>
-        <div class="team-bios">
-       
-     
-        </div>
-    </div>
-   
-<div class="team-bios">
-    <div class="footer-1">
-        <div class="member-bio">
-            <img src="src\images\Rea Image.png">Reatlilwe Maroga 
-            <span>Project Manager</span>
-        </div>
-        <div class="member-bio">
-            <img src="src\images\Madimetja Image.png">Madimetja Malele 
-            <span>Designer</span>
-        </div>
-    </div>
-    <div class="footer-2">
-        <div class="member-bio">
-            <img src="src\images\Tsholofelo Image.png">Tsholofelo Sekome
-            <span>Developer</span>
-        </div>
-       
-        <div class="member-bio">
-            <img src="src\images\Stacy Image.png">Stacy Wangui
-            <span>Writer</span>
-         </div>
-    </div>
-</div>
-</div>
-</div>
+    <footer>
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: support@menstrualhealthhub.com</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Address: 123 Wellness Street, Health City</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter Signup</h3>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <p>&copy; 2024 PrincessCare. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // You can add JavaScript here for any interactive features
+    </script>
 </body>
 </html>

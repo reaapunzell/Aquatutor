@@ -139,6 +139,57 @@
         .section-header.active .expand-icon::after {
             content: '-';
         }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-section {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+            color: white;
+            text-decoration: none;
+            font-weight: bold
+        }
+
+        footer form input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        footer form button {
+            padding: 10px 20px;
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        footer form button:hover {
+            background-color: #f8b3d2;
+        }
+
     </style>
     
     <!-- Navigation -->
@@ -156,7 +207,7 @@
                     <li><a href="#contact-us.html">Contact</a></li>
                     <li><a href="contact-us.html" class="btn">Contact Us</a></li>
                     <li><a href="about-us.html" class="btn">About Us</a></li>
-                    </li><a href="setting.html" class="btn">Settings</a></li>
+                    </li><a href="settings.html" class="btn">Settings</a></li>
                 </ul>
                 <div class="search-bar">
                     <input type="text" placeholder="Search...">
@@ -170,8 +221,8 @@
                 <h1>Empowering Menstrual Health</h1>
                 <p>Your trusted resource for all things menstrual health and hygiene.</p>
                 <div class="cta-buttons">
-                    <!-- <a href="signup.html" class="btn">Sign Up -->
-                    <a href="login.html" class="btn">Get Started</a>
+                    <!-- <a href="signup.html" class="btn">Sign Up 
+                    <a href="login.html" class="btn">Get Started</a>-->
                 </div>
             </div>
         </section>
@@ -387,9 +438,24 @@
                     <li>Encouraging open conversations about menstruation across genders and generations</li>
                 </ul>
             </div>
+            <a href="track-period.html" class="btn">Track My Period</a>
         </section>
     </div>
-
+    <footer>
+    <div class="quiz-section">
+        <h2>Engage with Us: Take our Menstrual Health Quiz</h2>
+        <p>Test your knowledge about menstrual health and learn more!This quiz covers various aspects of menstrual health, from basic biology to hygiene practices and common myths.</p>
+        <button onclick="startQuiz()"></button>
+        <div id="quiz-container" style="display:none;">
+            <div id="quiz-question" class="quiz-question"></div>
+            <div id="quiz-options" class="quiz-options"></div>
+            <button onclick="submitAnswer()">Submit Answer</button>
+            <div id="quiz-result"></div>
+        </div>
+        <a href="quiz.html" class="btn">QUIZ</a>
+    </div>
+</div>
+</footer>
     <script>
         document.querySelectorAll('.section-header').forEach(header => {
             header.addEventListener('click', () => {
