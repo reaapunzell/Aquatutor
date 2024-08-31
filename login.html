@@ -35,7 +35,103 @@
         background-color: var(--secondary-color);
         padding: 20px;
     }
+    header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: horizontal;
+            padding: 1rem;
+        }
 
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav .search-bar {
+            margin-top: 10px;
+        }
+
+        nav .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .horizontal-sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex: 1;
+            min-width: 200px;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-content {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
     .login-container {
         display: flex;
         justify-content: center;
@@ -131,7 +227,36 @@
   </style>
 </head>
 <body>
+    <header>
+        <h1>Learn About Menstrual Health</h1>
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <h1>GirliesHub</h1>
+                <ul>
+                    <li><a href="#index.html">Home</a></li>
+                    <li><a href="purchaseProducts.html" class="btn">Shop</a></li>
+                    <li><a href="contact-us.html" class="btn">Contact Us</a></li>
+                    <li><a href="about-us.html" class="btn">About Us</a></li>
+                    </li><a href="settings.html" class="btn">Settings</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </nav>
+        </header>
     
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Empowering Menstrual Health</h1>
+                <p>Your trusted resource for all things menstrual health and hygiene.</p>
+                <div class="cta-buttons">
+                    <!-- <a href="signup.html" class="btn">Sign Up 
+                    <a href="login.html" class="btn">Get Started</a>-->
+                </div>
+            </div>
+        </section>
 <div class="login-container">
     <div class="login-box">
         <header>Menstrual Health & Hygiene</header>
