@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Health and Hygiene Products</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #FF69B4;
+            --secondary-color: #FFC0CB;
+            --accent-color: #8A2BE2;
+            --bg-color: #FFF0F5;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1, h2, h3 {
+            color: var(--accent-color);
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: calc(25% - 20px);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+        }
+        .cart {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .order-form, .order-tracking {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            padding: 20px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: var(--primary-color);
+        }
+        .info-section {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Menstrual Health and Hygiene Products</h1>
+    </header>
+    <div class="container">
+        <div class="info-section">
+            <h2>About Our Products</h2>
+            <p>We offer a range of high-quality menstrual health and hygiene products designed for comfort and reliability. Our products are made from safe, eco-friendly materials to support both your health and the environment.</p>
+        </div>
+        
+        <h2>Our Products</h2>
+        <div class="product-list" id="productList">
+            <!-- Products will be dynamically added here -->
+        </div>
+        
+        <div class="cart" id="cart">
+            <h2>Your Cart</h2>
+            <div id="cartItems"></div>
+            <p>Total: $<span id="cartTotal">0</span></p>
+        </div>
+        
+        <div class="order-form">
+            <h2>Your Details</h2>
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="email" id="email" placeholder="Email Address">
+            <input type="text" id="address" placeholder="Delivery Address">
+            <button onclick="placeOrder()">Place Order</button>
+        </div>
+        
+        <div class="order-tracking">
+            <h2>Track Your Order</h2>
+            <input type="text" id="orderId" placeholder="Enter your Order ID">
+            <button onclick="trackOrder()">Track Order</button>
+            <div id="trackingResult"></div>
+        </div>
+
+        <div class="info-section">
+            <h2>Menstrual Health Tips</h2>
+            <ul>
+                <li>Change your pad or tampon every 4-8 hours.</li>
+                <li>Maintain good hygiene practices during your period.</li>
+                <li>Stay hydrated and eat a balanced diet.</li>
+                <li>Exercise regularly to help with cramps and mood.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: 'Organic Cotton Pads', price: 5, description: 'Soft and absorbent pads made from 100% organic cotton.' },
+            { id: 2, name: 'Breathable Panty Liners', price: 3, description: 'Ultra-thin liners for everyday freshness.' },
+            { id: 3, name: 'Gentle Cleansing Wipes', price: 4, description: 'pH-balanced wipes for sensitive skin.' },
+            { id: 4, name: 'Monthly Care Hamper', price: 15, isHamper: true, description: 'A curated selection of our best products for your monthly needs.' }
+        ];
+        
+        const cart = [];
+        
+        function renderProducts() {
+            const productList = document.getElementById('productList');
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'product';
+                productElement.innerHTML = `
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <p>Price: $${product.price}</p>
+                    <button onclick="addToCart(${product.id})">Add to Cart</button>
+                `;
+                if (product.isHamper) {
+                    productElement.innerHTML += `<p>Value: $${product.price}</p>`;
+                }
+                productList.appendChild(productElement);
+            });
+        }
+        
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            cart.push(product);
+            updateCart();
+        }
+        
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            cartItems.innerHTML = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = `${item.name} - $${item.price}`;
+                cartItems.appendChild(itemElement);
+                total += item.price;
+            });
+            
+            cartTotal.textContent = total.toFixed(2);
+        }
+        
+        function placeOrder() {
+            const orderId = uuid.v4();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            
+            if (!name || !email || !address) {
+                alert('Please fill in all fields before placing your order.');
+                return;
+            }
+            
+            const order = {
+                id: orderId,
+                items: cart,
+                total: cart.reduce((sum, item) => sum + item.price, 0),
+                status: 'Order Received'
+            };
+            
+            // Simulating order placement and payment
+            setTimeout(() => {
+                alert(`Thank you for your order, ${name}! Your order ID is ${orderId}. We'll send a confirmation email to ${email} shortly.`);
+                // Here you would typically send the order to a server
+            }, 1000);
+        }
+        
+        function trackOrder() {
+            const orderId = document.getElementById('orderId').value;
+            const trackingResult = document.getElementById('trackingResult');
+            
+            if (!orderId) {
+                alert('Please enter an Order ID to track your order.');
+                return;
+            }
+            
+            // Simulating order tracking
+            const statuses = ['Order Received', 'Processing', 'Shipped', 'Out for Delivery', 'Delivered'];
+            const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+            
+            trackingResult.innerHTML = `
+                <h3>Order ID: ${orderId}</h3>
+                <p>Status: ${randomStatus}</p>
+                <p>Estimated Delivery: Within 3-5 business days</p>
+            `;
+        }
+        
+        renderProducts();
+    </script>
+</body>
+</html>
