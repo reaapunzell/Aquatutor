@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+
     const storeItems = {
-        1: { id: 1, name: "Always Maxi Duo Sanitary Pads Super Plus x 18", price: 53.95 + (53.95 * 0.4), image: "src/images/always pad pack.jpeg" },
-        2: { id: 2, name: "Lil-lets Tampons x32", price: 54.99 + (54.99 * 0.4), image: "src/images/lilets tampons.jpeg" },
-        3: { id: 3, name: "Always Sensitive Sanitary Pads Ultra Super Plus", price: 52.95 + (52.95 * 0.4), image: "src/images/Always Sensitive Santary Pads Ultra Super Plus.webp" },
-        4: { id: 4, name: "PURA Health Alcohol Wipes Hand Sanitizer", price: 32.50 + (32.50 * 0.4), image: "src/images/Alcohol Wipes Hand Sanitizer.webp" },
-        5: { id: 5, name: "Dettol Hand Sanitizer", price: 86.45 + (86.45 * 0.4), image: "src/images/Hand Sanitizer.webp" }
+        1: { id: 1, name: "Always Maxi Duo Sanitary Pads Super Plus x 18", price: 53.95 + (53.95 * 0.4),quantity:0,  image: "src/images/always pad pack.jpeg" },
+        2: { id: 2, name: "Lil-lets Tampons x32", price: 54.99 + (54.99 * 0.4), quantity:0, image: "src/images/lilets tampons.jpeg" },
+        3: { id: 3, name: "Always Sensitive Sanitary Pads Ultra Super Plus", price: 52.95 + (52.95 * 0.4),quantity:0,  image: "src/images/Always Sensitive Santary Pads Ultra Super Plus.webp" },
+        4: { id: 4, name: "PURA Health Alcohol Wipes Hand Sanitizer", price: 32.50 + (32.50 * 0.4), quantity:0,  image: "src/images/Alcohol Wipes Hand Sanitizer.webp" },
+        5: { id: 5, name: "Dettol Hand Sanitizer", price: 86.45 + (86.45 * 0.4), quantity:0, image: "src/images/Hand Sanitizer.webp" }
     };
 
     const gallery = document.querySelector('.gallery');
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const trackOrderButton = document.querySelector('.order-tracking button');
     const trackingResult = document.getElementById('trackingResult');
 
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = [];
 
     function createProductCards() {
         const fragment = document.createDocumentFragment();
@@ -43,24 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const quantityControl = document.createElement('div');
             quantityControl.classList.add('quantity-control');
 
-            const minusButton = document.createElement('button');
-            minusButton.textContent = '-';
-            minusButton.addEventListener('click', function() {
-                updateCartQuantity(product.id, 'decrement');
-            });
-            quantityControl.appendChild(minusButton);
-
             const quantityDisplay = document.createElement('span');
             quantityDisplay.classList.add('quantity-display');
             quantityDisplay.textContent = '0';
             quantityControl.appendChild(quantityDisplay);
-
-            const plusButton = document.createElement('button');
-            plusButton.textContent = '+';
-            plusButton.addEventListener('click', function() {
-                updateCartQuantity(product.id, 'increment');
-            });
-            quantityControl.appendChild(plusButton);
 
             productCard.appendChild(quantityControl);
 
@@ -83,36 +70,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const existingItem = cart.find(item => item.id === productId);
 
         if (existingItem) {
-            existingItem.quantity += 1;
+            existingItem.quantity += 1; // Reset quantity to 1
         } else {
             const cartItem = {
                 id: product.id,
                 name: product.name,
                 price: product.price,
-                quantity: 1
+                quantity: 1// Initialize quantity to 1
             };
             cart.push(cartItem);
         }
 
         updateCart();
         updateProductCardQuantity(productId);
-    }
-
-    function updateCartQuantity(productId, action) {
-        const existingItem = cart.find(item => item.id === productId);
-
-        if (existingItem) {
-            if (action === 'increment') {
-                existingItem.quantity += 1;
-            } else if (action === 'decrement' && existingItem.quantity > 1) {
-                existingItem.quantity -= 1;
-            } else if (action === 'decrement' && existingItem.quantity === 1) {
-                cart = cart.filter(item => item.id !== productId);
-            }
-
-            updateCart();
-            updateProductCardQuantity(productId);
-        }
     }
 
     function updateProductCardQuantity(productId) {
@@ -128,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function updateCart() {
-        localStorage.setItem('cart', JSON.stringify(cart));
         let total = 0;
         let itemCount = 0;
 
@@ -160,23 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function updateOrderSummary() {
-        cartItems.innerHTML = '';
-        let total = 0;
-
-        cart.forEach(item => {
-            total += item.price * item.quantity;
-
-            const cartItem = document.createElement('li');
-            cartItem.textContent = `${item.name} - R${item.price.toFixed(2)} x ${item.quantity}`;
-            cartItems.appendChild(cartItem);
-        });
-
-        console.log('Order Summary:', cart);
-        console.log('Total:', total);
-
-        cartTotal.textContent = total.toFixed(2);
-    }
+    
 
     if (placeOrderButton) {
         placeOrderButton.addEventListener('click', function() {
