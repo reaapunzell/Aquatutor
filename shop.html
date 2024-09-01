@@ -332,6 +332,21 @@ footer form button:hover {
             justify-content: center;
         }
 
+        .checkout{
+            display:flex;
+            justify-content: center;
+        }
+        
+        
+            .container-customer-information{
+                width: 807px; 
+            height: 378px; 
+            background: #FFFFFFFF; /* white */
+            border-radius: 4px; /* border-m */
+            border-width: 1px; 
+            border-color: #F3F4F6FF; /* neutral-200 */
+            border-style: solid; 
+            }
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -381,28 +396,89 @@ footer form button:hover {
         #interactive {
             padding-bottom: 300px;
         }
+
+        .checkout-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .order-summary, .payment-method {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-summary h2, .payment-method h2 {
+            margin-bottom: 10px;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .order-item p {
+            margin: 0;
+        }
+
+        #customer-information {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #payment-method {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .checkout button {
+            background-color: #FF69B4FF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .checkout button:hover {
+            background-color: #d95787;
+        }
+
+        .checkout h1 {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-
-    <!-- Navigation -->
     <header>
         <div class="search-bar">
             <input type="text" placeholder="Search...">
         </div>
-        
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html" >Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="yourcycle.html" >Your Cycle</a></li>
-            <li><a href="about-us.html" >About Us</a></li>
-            <li><a href="contact-us.html" >Contact Us</a></li>
-            <li><a href="setting.html" >Settings</a></li>
+            <li><a href="yourcycle.html">Your Cycle</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="setting.html">Settings</a></li>
         </ul>
-       
     </nav>
 
     <!-- Hero Section -->
@@ -416,61 +492,45 @@ footer form button:hover {
         <img src="src/images/hamper graphic.png" alt="hamper graphic">
     </section>
 
-    
     <!-- Product Gallery -->
     <div class="gallery"></div>
 
     <button id="cart-button">Cart (<span id="cart-count">0</span>)</button> 
     <p>Subtotal: R<span id="cart-total">0.00</span></p>
-    
-    <div id="cart-details" style="display:none">
-        <h2>Your Cart</h2>
-        <
-    </div>
 
-    <section id="checkout" style="display:none">
-        
-    <h1>My Shopping Cart</h1>
+    <section id="checkout" class="checkout" style="display:none">
+        <div class="checkout-content">
+            <h1>My Shopping Cart</h1>
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-products"></div>
+                <p>Delivery Fee: R35</p>
+                <p>Total: R<span id="payment-total"></span></p>
+            </div>
 
-        <h2>Order summary</h2>
-        <div class="order-titles">
-            <p>Name</p>
-            <p>Price</p>
-            <p>Quantity</p>
-            <p>Total</p>
+            <div id="customer-information" class="customer-information">
+                <h2>Customer Information</h2>
+                <form>
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" required>
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" required></textarea>
+                </form>
+            </div>
+
+            <div id="payment-method">
+                <h2>Payment Method</h2>
+                <p>Change payment methods</p>
+                <div class="card-info">
+                    <p>Mastercard</p>
+                    <p>****5987</p>
+                </div>
+
+            <button id="purchase-button">Purchase</button>
         </div>
-        <div class="order-products"></div>
     </section>
-
-    <section id="customer-information">
-        <h2>Customer Information</h2>
-        <form>
-            <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="full-name" required>
-            <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" name="phone-number" required>
-            <label for="address">Address</label>
-                <textarea id="address" name="address" rows="4" required></textarea>
-        </form>
-    </section>
-
-    <section id="payment-method">
-        <h2>Payment Method</h2>
-        <p>Change payment methods</p>
-        <div class="card-info">
-            <p>Mastercard</p>
-            <p>****5987</p>
-        </div>
-        <div class="payment-summary">
-            <h2>Summary</h2>
-            <p>Subtotal: R<span id="cart-total">0.00</span></p>
-            <p>Delivery Fee: R35</p>
-            <br>
-            <p>Total: R<span id="payment-total"></span></p>
-        </div>
-
-    </section>
-
 
     <!-- Footer -->
     <footer id="contact">
@@ -499,6 +559,4 @@ footer form button:hover {
 
     <!-- External JS -->
     <script src="src/script.js"></script>
-
 </body>
-</html>

@@ -3,7 +3,8 @@ const storeItems = {
     2: { id: 2, name: "Lil-lets Tampons x32", price: 54.99 + (54.99 * 0.4), image: "src/images/lilets tampons.jpeg" },
     3: { id: 3, name: "Always Sensitive Sanitary Pads Ultra Super Plus", price: 52.95 + (52.95 * 0.4), image: "src/images/Always Sensitive Santary Pads Ultra Super Plus.webp" },
     4: { id: 4, name: "PURA Health Alcohol Wipes Hand Sanitizer", price: 32.50 + (32.50 * 0.4), image: "src/images/Alcohol Wipes Hand Sanitizer.webp" },
-    5: {id: 5, name:"Dettol Hand Sanitizer", price:86.45+(86.45*0.4), image:"src/images/Hand Sanitizer.webp"}
+    5: {id: 5, name:"Dettol Hand Sanitizer", price:86.45+(86.45*0.4), image:"src/images/Hand Sanitizer.webp"},
+    6: {id: 6, name:"Princess Hamper", price:120, image:"src/images/hamper graphic.png"}
 };
 document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.querySelector('.gallery');
@@ -182,6 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
         cartTotalElement.textContent = cartTotal.toFixed(2);
         paymentTotalElement.textContent = total.toFixed(2);
     }
+
+    
 
     // Form submission handling
     const checkoutForm = document.querySelector('#customer-information form');

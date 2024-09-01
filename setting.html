@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Princess Care</title>
+    <style>
+        
+         :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8b3d2;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: horizontal;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+            font-size:30px;
+        }
+
+        .active{
+            color:#ff69b4;
+        }
+        nav ul li a {
+            color: gray;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav .search-bar {
+            margin-top: 10px;
+        }
+
+        .search-bar input {
+            width: 500px; 
+  height: 52px; 
+  padding-left: 52px; 
+  padding-right: 20px; 
+  font-family: Inter; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  background: #F3F4F6FF; /* neutral-200 */
+  border-radius: 8px; /* border-xl */
+  border-width: 0px; 
+  outline: none; 
+        }
+
+        .search-form {
+            display: flex;
+        }
+
+        .search-form input[type="search"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .search-form input[type="submit"] {
+            padding: 5px 10px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .settings-menu {
+            width: 250px;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .settings-menu ul {
+            list-style: none;
+        }
+
+        .settings-menu ul li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .settings-menu ul li:hover,
+        .settings-menu ul li.active {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .settings-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .update-photo, .update-information {
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .notification-options li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .arrow-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        #interactive {
+            padding-bottom: 20px;
+        }
+
+        .info-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+        <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+        </header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Products</a></li>
+                    <li><a href="yourcycle.html" >Your Cycle</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="setting.html"  class="active">Settings</a></li>
+                </ul>
+               
+            </nav>
+           
+       
+           <main>
+            <div class="settings-menu">
+                <ul>
+                    <li onclick="showSection('account-settings')" class="active">Account Settings</li>
+                    <li onclick="showSection('notifications')">Notifications</li>
+                    <li onclick="showSection('accessibility')">Accessibility, Display, & Language</li>
+                    <li onclick="showSection('password-security')">Password & Security</li>
+                    <li onclick="showSection('menstrual-health-info')">Menstrual Health Info</li>
+                </ul>
+            </div>
+            <div class="settings-section" id="account-settings">
+                <h2>Account Settings</h2>
+                <div class="update-photo">
+                    <label for="upload-photo">Upload a New Photo</label>
+                    <input type="file" id="upload-photo">
+                    <button>Update</button>
+                </div>
+                <div class="update-information">
+                    <form>
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" id="email-address">
+                        <label for="address">Address</label>
+                        <input type="text" id="address">
+                        <label for="city">City</label>
+                        <input type="text" id="city">
+                        <label for="state">State/Province</label>
+                        <input type="text" id="state">
+                        <label for="country">Country</label>
+                        <input type="text" id="country">
+                        <button type="submit">Update Information</button>
+                    </form>
+                </div>
+            </div>
+            <div class="settings-section" id="notifications" style="display:none">
+                <h2>Notifications</h2>
+                <ul class="notification-options">
+                    <li>
+                        <div>
+                            <h4>Filters</h4>
+                            <p>Choose the notifications you'd like to see - and those you don't</p>
+                        </div>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                    <li>
+                        <div>
+                            <h4>Preferences</h4>
+                            <p>Select your preferences by notification type</p>
+                        </div>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                </ul>
+            </div>
+            <div class="settings-section" id="accessibility" style="display:none">
+                <h2>Accessibility, Display, & Language</h2>
+                <ul class="notification-options">
+                    <li>
+                        <div>
+                            <h4>Accessibility</h4>
+                            <p>Manage aspects of your experience such as limiting colour contrast, motion and text-to-voice options</p>
+                        </div>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                    <li>
+                        <div>
+                            <h4>Display</h4>
+                            <p>Manage your font size, colour, and background</p>
+                        </div>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                    <li>
+                        <div>
+                            <h4>Languages</h4>
+                            <p>Manage which languages you experience our app in</p>
+                        </div>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                    <li>
+                        <div>
+                            <h4>Features</h4>
+                            <p>Manage which features you would like</p>
+                        </div>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                </ul>
+            </div>
+            <div class="settings-section" id="password-security" style="display:none">
+                <h2>Password & Security</h2>
+                <ul class="notification-options">
+                    <li>
+                        <div>
+                            <h4>Change your password</h4>
+                            <p>Change your password at any time</p>
+                        </div>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                    <li>
+                        <h4>Deactivate your account</h4>
+                        <p>Find out how you can deactivate your account</p>
+                        <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                    </li>
+                </ul>
+            </div>
+            <div class="settings-section" id="menstrual-health-info" style="display:none">
+                <h2>Menstrual Health Information</h2>
+                <div class="info-section">
+                    <h3>Understanding Your Menstrual Cycle</h3>
+                    <p>The menstrual cycle is a natural process that occurs in the female body, typically lasting about 28 days. It involves hormonal changes that prepare the body for potential pregnancy.</p>
+                </div>
+                <div class="info-section">
+                    <h3>Common Symptoms</h3>
+                    <ul>
+                        <li>Cramps</li>
+                        <li>Bloating</li>
+                        <li>Mood changes</li>
+                        <li>Fatigue</li>
+                    </ul>
+                </div>
+                <div class="info-section">
+                    <h3>Menstrual Hygiene Tips</h3>
+                    <ol>
+                        <li>Change your sanitary product regularly</li>
+                        <li>Wash hands before and after changing products</li>
+                        <li>Choose the right product for your flow</li>
+                        <li>Stay hydrated and maintain a balanced diet</li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.settings-section');
+            sections.forEach(section => {
+                section.style.display = section.id === sectionId ? 'block' : 'none';
+            });
+
+            const menuItems = document.querySelectorAll('.settings-menu ul li');
+            menuItems.forEach(item => {
+                item.classList.toggle('active', item.getAttribute('onclick').includes(sectionId));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('account-settings');
+        });
+    </script>
+</body>
+</html>
