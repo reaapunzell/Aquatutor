@@ -243,8 +243,8 @@
                 const productElement = document.createElement('div');
                 productElement.className = 'product';
                 productElement.innerHTML = `
-                    <h3>${product.name}</h3>
-                    <p>${product.description}</p>
+                    <h3>R{product.name}</h3>
+                    <p>R{product.description}</p>
                     <p>Price: $${product.price}</p>
                     <button onclick="addToCart(${product.id})">Add to Cart</button>
                 `;
