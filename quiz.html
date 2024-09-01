@@ -25,13 +25,35 @@
             margin: 0 auto;
             padding: 20px;
         }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-bottom: 2rem;
+        
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8b3d2;
+            --text-color: #333;
+            --background-color: #fff;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PT Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         header {
             background-color: var(--primary-color);
             color: white;
@@ -49,10 +71,15 @@
 
         nav ul li {
             display: inline;
+            margin-left: 20px;
+            font-size:30px;
         }
 
+        .active{
+            color:#ff69b4;
+        }
         nav ul li a {
-            color: white;
+            color: gray;
             text-decoration: none;
             font-weight: bold;
         }
@@ -61,11 +88,20 @@
             margin-top: 10px;
         }
 
-        nav .search-bar input {
-            padding: 5px;
-            border: none;
-            border-radius: 5px;
+        .search-bar input {
+            width: 500px; 
+            height: 52px; 
+            padding-left: 52px; 
+            padding-right: 20px; 
+            font-size: 18px; 
+            line-height: 28px; 
+            font-weight: 400; 
+            background: #F3F4F6FF; /* neutral-200 */
+            border-radius: 8px; /* border-xl */
+            border-width: 0px; 
+            outline: none; 
         }
+
 
         h1, h2, h3 {
             color: var(--primary-color);
@@ -123,23 +159,20 @@
 </head>
 <body>
     <header>
-        
-            <h1>Learn About Menstrual Health</h1>
-            <nav>
-                    <h1>GirliesHub</h1>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="purchaseProducts.html" class="btn">Shop</a></li>
-                        <li><a href="contact-us.html" class="btn">Contact Us</a></li>
-                        <li><a href="about-us.html" class="btn">About Us</a></li>
-                        </li><a href="settings.html" class="btn">Settings</a></li>
-                    </ul>
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search...">
-                    </div>
-                </nav>
-            
-        <h1>Menstrual Health Education</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="menstrual-health.html" >Learn</a></li>
+            <li><a href="track-period.html">Track My Period</a></li>
+            <li><a href="setting.html" class="btn">Settings</a></li>
+        </ul>
+    </nav>
     </header>
     <div class="container">
         <div class="content-section">

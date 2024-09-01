@@ -1,25 +1,28 @@
-const storeItems = {
-    1: { id: 1, name: "Always Maxi Duo Sanitary Pads Super Plus x 18", price: 53.95 + (53.95 * 0.4), image: "src/images/always pad pack.jpeg" },
-    2: { id: 2, name: "Lil-lets Tampons x32", price: 54.99 + (54.99 * 0.4), image: "src/images/lilets tampons.jpeg" },
-    3: { id: 3, name: "Always Sensitive Sanitary Pads Ultra Super Plus", price: 52.95 + (52.95 * 0.4), image: "src/images/Always Sensitive Santary Pads Ultra Super Plus.webp" },
-    4: { id: 4, name: "PURA Health Alcohol Wipes Hand Sanitizer", price: 32.50 + (32.50 * 0.4), image: "src/images/Alcohol Wipes Hand Sanitizer.webp" },
-    5: {id: 5, name:"Dettol Hand Sanitizer", price:86.45+(86.45*0.4), image:"src/images/Hand Sanitizer.webp"},
-    6: {id: 6, name:"Princess Hamper", price:120, image:"src/images/hamper graphic.png"}
-};
 document.addEventListener('DOMContentLoaded', function() {
+    const storeItems = {
+        1: { id: 1, name: "Always Maxi Duo Sanitary Pads Super Plus x 18", price: 53.95 + (53.95 * 0.4), image: "src/images/always pad pack.jpeg" },
+        2: { id: 2, name: "Lil-lets Tampons x32", price: 54.99 + (54.99 * 0.4), image: "src/images/lilets tampons.jpeg" },
+        3: { id: 3, name: "Always Sensitive Sanitary Pads Ultra Super Plus", price: 52.95 + (52.95 * 0.4), image: "src/images/Always Sensitive Santary Pads Ultra Super Plus.webp" },
+        4: { id: 4, name: "PURA Health Alcohol Wipes Hand Sanitizer", price: 32.50 + (32.50 * 0.4), image: "src/images/Alcohol Wipes Hand Sanitizer.webp" },
+        5: { id: 5, name: "Dettol Hand Sanitizer", price: 86.45 + (86.45 * 0.4), image: "src/images/Hand Sanitizer.webp" }
+    };
+
     const gallery = document.querySelector('.gallery');
-    const cartItems = document.getElementById("cart-items");
-    const cartTotal = document.getElementById('cart-total');
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById('cartTotal');
     const cartButton = document.getElementById('cart-button');
     const checkoutSection = document.getElementById('checkout');
-    const cartDetails = document.getElementById('cart-details');
+    const placeOrderButton = document.getElementById('place-order-button');
+    const trackOrderButton = document.querySelector('.order-tracking button');
+    const trackingResult = document.getElementById('trackingResult');
 
-    let cart = [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     function createProductCards() {
+        const fragment = document.createDocumentFragment();
+
         for (let key in storeItems) {
             const product = storeItems[key];
-
             const productCard = document.createElement('div');
             productCard.classList.add('product-card');
             productCard.setAttribute('data-id', product.id);
@@ -69,8 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             productCard.appendChild(addToCartButton);
 
-            gallery.appendChild(productCard);
+            fragment.appendChild(productCard);
         }
+
+        gallery.appendChild(fragment);
     }
 
     function addToCart(productId) {
@@ -132,67 +137,102 @@ document.addEventListener('DOMContentLoaded', function() {
             itemCount += item.quantity;
         });
 
+        console.log('Cart:', cart);
+        console.log('Total:', total);
+
         const cartCount = document.getElementById('cart-count');
         if (cartCount) {
             cartCount.textContent = itemCount;
         }
-        const cartTotal = document.getElementById('cart-total');
         if (cartTotal) {
             cartTotal.textContent = total.toFixed(2);
         }
     }
 
-    cartButton.addEventListener('click', function() {
-        // Toggle visibility of checkout section
-        checkoutSection.style.display = 'block';
-        document.querySelector('header').style.display = 'none';
-        document.querySelector('nav').style.display = 'none';
-        document.querySelector('.gallery').style.display = 'none';
-        document.querySelector('.princess-hamper-information').style.display = 'none';
-
-        // Update order summary in checkout section
-        updateOrderSummary();
-    });
-
-    function updateOrderSummary() {
-        const orderProductsContainer = document.querySelector('.order-products');
-        const cartTotalElement = document.getElementById('cart-total');
-        const paymentTotalElement = document.getElementById('payment-total');
-        
-        let cartTotal = 0;
-        orderProductsContainer.innerHTML = ''; // Clear existing items
-
-        cart.forEach(item => {
-            const itemTotal = item.price * item.quantity;
-            cartTotal += itemTotal;
-
-            const productDiv = document.createElement('div');
-            productDiv.classList.add('order-item');
-            productDiv.innerHTML = `
-                <p>${item.name}</p>
-                <p>R${item.price.toFixed(2)}</p>
-                <p>${item.quantity}</p>
-                <p>R${itemTotal.toFixed(2)}</p>
-            `;
-            orderProductsContainer.appendChild(productDiv);
+    if (cartButton) {
+        cartButton.addEventListener('click', function() {
+            checkoutSection.style.display = 'block';
+            document.querySelector('header').style.display = 'none';
+            document.querySelector('nav').style.display = 'none';
+            document.querySelector('.gallery').style.display = 'none';
+            document.querySelector('.princess-hamper-information').style.display = 'none';
+            updateOrderSummary();
         });
-
-        const deliveryFee = 35;
-        const total = cartTotal + deliveryFee;
-
-        cartTotalElement.textContent = cartTotal.toFixed(2);
-        paymentTotalElement.textContent = total.toFixed(2);
     }
 
-    
+    function updateOrderSummary() {
+        cartItems.innerHTML = '';
+        let total = 0;
 
-    // Form submission handling
-    const checkoutForm = document.querySelector('#customer-information form');
-    checkoutForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        alert('Order Submitted!');
-        localStorage.removeItem('cart');
-    });
+        cart.forEach(item => {
+            total += item.price * item.quantity;
 
+            const cartItem = document.createElement('li');
+            cartItem.textContent = `${item.name} - R${item.price.toFixed(2)} x ${item.quantity}`;
+            cartItems.appendChild(cartItem);
+        });
+
+        console.log('Order Summary:', cart);
+        console.log('Total:', total);
+
+        cartTotal.textContent = total.toFixed(2);
+    }
+
+    if (placeOrderButton) {
+        placeOrderButton.addEventListener('click', function() {
+            placeOrder();
+        });
+    }
+
+    function placeOrder() {
+        const orderId = uuid.v4();  // Ensure uuid library is included
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+
+        if (!name || !email || !address) {
+            alert('Please fill in all fields before placing your order.');
+            return;
+        }
+
+        const order = {
+            id: orderId,
+            items: cart,
+            total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+            status: 'Order Received'
+        };
+
+        // Simulating order placement and payment
+        setTimeout(() => {
+            alert(`Thank you for your order, ${name}! Your order ID is ${orderId}. We'll send a confirmation email to ${email} shortly.`);
+        }, 1000);
+    }
+
+    function trackOrder() {
+        const orderId = document.getElementById('orderId').value;
+        const trackingResult = document.getElementById('trackingResult');
+        
+        if (!orderId) {
+            alert('Please enter an Order ID to track your order.');
+            return;
+        }
+        
+        // Simulating order tracking
+        const statuses = ['Processing', 'Shipped', 'Out for Delivery', 'Delivered'];
+        const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+        
+        trackingResult.innerHTML = `
+            <h3>Order ID: ${orderId}</h3>
+            <p>Status: ${randomStatus}</p>
+            <p>Estimated Delivery: Within 3-5 business days</p>
+        `;
+    }
+
+    // Initialize product cards
     createProductCards();
+
+    // Track Order Button Event
+    if (trackOrderButton) {
+        trackOrderButton.addEventListener('click', trackOrder);
+    }
 });

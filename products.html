@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn About Menstrual Health</title>
+    <title>Princess Care</title>
     <style>
          :root {
             --primary-color: #ff69b4;
@@ -16,6 +16,10 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        p{
+            font-size: 40px;
         }
 
         body {
@@ -85,6 +89,8 @@
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
+
+       
 
         .horizontal-sections {
             display: flex;
@@ -172,7 +178,7 @@
             border-radius: 8px;
             padding: 20px;
             text-align: center;
-            width: 200px;
+            width: 400px;
             height: auto;
         }
 
@@ -183,17 +189,17 @@
         }
 
         .product-card h2 {
-            font-size: 1.2em;
+            font-size: 30px;
             margin: 10px 0;
         }
 
         .product-card p {
-            font-size: 1em;
+            font-size: 30px;
             color: #333;
         }
 
         .add-to-cart {
-            background-color: #28a745;
+            font-size:50px;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -217,78 +223,13 @@
             margin-top: 0;
         }
 
-        #cart-items {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #cart-items li {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        #customer-information form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-#customer-information label {
-    font-weight: bold;
-}
-
-#customer-information input[type="text"], 
-#customer-information input[type="tel"], 
-#customer-information textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#customer-information textarea {
-    resize: vertical;
-}
-
-#payment-method {
-    margin-top: 20px;
-}
-
-#payment-method .card-info {
-    margin-bottom: 20px;
-}
-
-#payment-method .payment-summary {
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-}
-
-#payment-method p {
-    margin-bottom: 5px;
-}
 
 button {
     cursor: pointer;
+    font-size: 20px;
 }
 
-#customer-information button, 
-footer form button {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-#customer-information button:hover, 
-footer form button:hover {
-    background-color: #d95787;
-}
 
 .hero{
     display:flex;
@@ -401,8 +342,7 @@ footer form button:hover {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -431,19 +371,6 @@ footer form button:hover {
             margin: 0;
         }
 
-        #customer-information {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        #payment-method {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
 
         .checkout button {
             background-color: #FF69B4FF;
@@ -462,6 +389,40 @@ footer form button:hover {
         .checkout h1 {
             margin-bottom: 20px;
         }
+
+        input{
+            font-size: 30px;
+        }
+
+        .cart {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .order-form, .order-tracking {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 24px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+       
+        .info-section {
+            background-color: var(--secondary-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -473,11 +434,11 @@ footer form button:hover {
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" >Home</a></li>
             <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="yourcycle.html">Your Cycle</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="setting.html">Settings</a></li>
+            <li><a href="menstrual-health.html" >Learn</a></li>
+            <li><a href="track-period.html">Track My Period</a></li>
+            <li><a href="setting.html" class="btn">Settings</a></li>
         </ul>
     </nav>
 
@@ -486,8 +447,7 @@ footer form button:hover {
         <div class="princess-hamper-information">
             <h1>Princess Hamper</h1>
             <p>The Princess Hamper is a basket of sanitary health products. By purchasing on our website you help fund a princess hamper for a girl in need.</p>
-            <button>Get Now</button>
-            <button class="learn-more">Learn more</button>
+            
         </div>
         <img src="src/images/hamper graphic.png" alt="hamper graphic">
     </section>
@@ -495,68 +455,63 @@ footer form button:hover {
     <!-- Product Gallery -->
     <div class="gallery"></div>
 
-    <button id="cart-button">Cart (<span id="cart-count">0</span>)</button> 
-    <p>Subtotal: R<span id="cart-total">0.00</span></p>
+    <div class="cart" id="cart">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <p>Total: R<span id="cartTotal">0</span></p>
+    </div>
+    
+    <div class="order-form">
+        <h2>Your Details</h2>
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email Address">
+        <input type="text" id="address" placeholder="Delivery Address">
+        <button id="place-order-button">Place Order</button>
+    </div>
+    
+    <div class="order-tracking">
+        <h2>Track Your Order</h2>
+        <input type="text" id="orderId" placeholder="Enter your Order ID">
+        <button onclick="trackOrder()">Track Order</button>
+        <div id="trackingResult"></div>
+    </div>
 
-    <section id="checkout" class="checkout" style="display:none">
-        <div class="checkout-content">
-            <h1>My Shopping Cart</h1>
-            <div class="order-summary">
-                <h2>Order Summary</h2>
-                <div class="order-products"></div>
-                <p>Delivery Fee: R35</p>
-                <p>Total: R<span id="payment-total"></span></p>
-            </div>
-
-            <div id="customer-information" class="customer-information">
-                <h2>Customer Information</h2>
-                <form>
-                    <label for="full-name">Full Name</label>
-                    <input type="text" id="full-name" name="full-name" required>
-                    <label for="phone-number">Phone Number</label>
-                    <input type="tel" id="phone-number" name="phone-number" required>
-                    <label for="address">Address</label>
-                    <textarea id="address" name="address" rows="4" required></textarea>
-                </form>
-            </div>
-
-            <div id="payment-method">
-                <h2>Payment Method</h2>
-                <p>Change payment methods</p>
-                <div class="card-info">
-                    <p>Mastercard</p>
-                    <p>****5987</p>
-                </div>
-
-            <button id="purchase-button">Purchase</button>
-        </div>
-    </section>
+    <div class="info-section">
+        <h2>Menstrual Health Tips</h2>
+        <ul>
+            <li>Change your pad or tampon every 4-8 hours.</li>
+            <li>Maintain good hygiene practices during your period.</li>
+            <li>Stay hydrated and eat a balanced diet.</li>
+            <li>Exercise regularly to help with cramps and mood.</li>
+        </ul>
+    </div>
+</div>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Learn more about our mission to support menstrual health.</p>
-            </div>
-            <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: info@example.com</p>
+                <p>Email: support@princesscare.co.za</p>
+                <p>Phone: +o11 456 7890</p>
+                <p>Address: 123 Wellness Street, Health City</p>
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
             </div>
             <div class="footer-section">
+                <h3>Newsletter Signup</h3>
                 <form>
-                    <h3>Subscribe to Our Newsletter</h3>
                     <input type="email" placeholder="Enter your email">
-                    <button>Subscribe</button>
+                    <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
     </footer>
 
     <!-- External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+
     <script src="src/script.js"></script>
 </body>

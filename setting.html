@@ -25,6 +25,9 @@
             padding: 0;
         }
 
+        body{
+            font-family: "PT Sans", sans-serif;
+        }
         
         header {
             background-color: var(--primary-color);
@@ -191,16 +194,15 @@
                     <input type="text" placeholder="Search...">
                 </div>
         </header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Products</a></li>
-                    <li><a href="yourcycle.html" >Your Cycle</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="setting.html"  class="active">Settings</a></li>
-                </ul>
-               
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="menstrual-health.html" >Learn</a></li>
+                <li><a href="track-period.html" >Track My Period</a></li>
+                <li><a href="setting.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
            
        
            <main>
@@ -210,7 +212,6 @@
                     <li onclick="showSection('notifications')">Notifications</li>
                     <li onclick="showSection('accessibility')">Accessibility, Display, & Language</li>
                     <li onclick="showSection('password-security')">Password & Security</li>
-                    <li onclick="showSection('menstrual-health-info')">Menstrual Health Info</li>
                 </ul>
             </div>
             <div class="settings-section" id="account-settings">
@@ -307,31 +308,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="settings-section" id="menstrual-health-info" style="display:none">
-                <h2>Menstrual Health Information</h2>
-                <div class="info-section">
-                    <h3>Understanding Your Menstrual Cycle</h3>
-                    <p>The menstrual cycle is a natural process that occurs in the female body, typically lasting about 28 days. It involves hormonal changes that prepare the body for potential pregnancy.</p>
-                </div>
-                <div class="info-section">
-                    <h3>Common Symptoms</h3>
-                    <ul>
-                        <li>Cramps</li>
-                        <li>Bloating</li>
-                        <li>Mood changes</li>
-                        <li>Fatigue</li>
-                    </ul>
-                </div>
-                <div class="info-section">
-                    <h3>Menstrual Hygiene Tips</h3>
-                    <ol>
-                        <li>Change your sanitary product regularly</li>
-                        <li>Wash hands before and after changing products</li>
-                        <li>Choose the right product for your flow</li>
-                        <li>Stay hydrated and maintain a balanced diet</li>
-                    </ol>
-                </div>
-            </div>
+           
         </main>
     </div>
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menstrual Health Tracker</title>
     <style>
-        :root {
+         :root {
             --primary-color: #ff69b4;
             --secondary-color: #f8b3d2;
             --text-color: #333;
@@ -19,14 +19,17 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
+            font-family: "PT Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
         }
 
+       
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -34,29 +37,49 @@
         header {
             background-color: var(--primary-color);
             color: white;
-            text-align: center;
+            text-align: horizontal;
             padding: 1rem;
         }
 
-        nav {
-            background-color: var(--secondary-color);
-            padding: 0.5rem;
-        }
-
         nav ul {
-            list-style-type: none;
+            list-style: none;
+            padding: 0;
             display: flex;
             justify-content: center;
+            gap: 1rem;
         }
 
         nav ul li {
-            margin: 0 1rem;
+            display: inline;
+            margin-left: 20px;
+            font-size:30px;
         }
 
+        .active{
+            color:#ff69b4;
+        }
         nav ul li a {
-            color: var(--text-color);
+            color: gray;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        nav .search-bar {
+            margin-top: 10px;
+        }
+
+        .search-bar input {
+            width: 500px; 
+  height: 52px; 
+  padding-left: 52px; 
+  padding-right: 20px; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  background: #F3F4F6FF; /* neutral-200 */
+  border-radius: 8px; /* border-xl */
+  border-width: 0px; 
+  outline: none; 
         }
 
         main {
@@ -67,7 +90,7 @@
         }
 
         section {
-            flex-basis: calc(50% - 1rem);
+            width:800px;
             margin-bottom: 2rem;
             background-color: #f9f9f9;
             padding: 1rem;
@@ -76,6 +99,7 @@
         }
 
         h2 {
+            font-size:40px;
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
@@ -83,6 +107,7 @@
         form {
             display: flex;
             flex-direction: column;
+            font-size:25px;
         }
 
         label {
@@ -94,6 +119,7 @@
             padding: 0.5rem;
             border: 1px solid #ccc;
             border-radius: 3px;
+            font-size:18px;
         }
 
         button {
@@ -124,19 +150,7 @@
                 flex-basis: 100%;
             }
         }
-    </style>
-</head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menstrual Health Tracker & Gyno Connect</title>
-    <style>
-        /* Existing styles remain unchanged */
-        /* ... */
 
-        /* Additional styles for gyno connection feature */
         #gyno-connect {
             background-color: #e6f2ff;
         }
@@ -147,6 +161,8 @@
         }
 
         #gyno-list li {
+            font-size:24px;
+            height:150px;
             background-color: #fff;
             margin-bottom: 10px;
             padding: 10px;
@@ -155,7 +171,8 @@
         }
 
         #gyno-list button {
-            background-color: #4CAF50;
+            font-size:24px;
+            background-color:#ff69b4;
             color: white;
             border: none;
             padding: 5px 10px;
@@ -165,41 +182,45 @@
         }
 
         #gyno-list button:hover {
-            background-color: #45a049;
+            background-color:#ff4d94;
         }
+
+        .lean-title{
+            text-align: center;
+            margin-top:20px;
+            color:#ff69b4;
+        }
+
+    
+        
     </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menstrual Health Tracker & Gyno Connect</title>
+   
 </head>
 <body>
     <header>
-        
-            
-            <!-- Navigation -->
-            <header>
-                <nav>
-                    <h1>GirliesHub</h1>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="purchaseProducts.html" class="btn">Shop</a></li>
-                        <li><a href="contact-us.html" class="btn">Contact Us</a></li>
-                        <li><a href="about-us.html" class="btn">About Us</a></li>
-                        </li><a href="settings.html" class="btn">Settings</a></li>
-                    </ul>
                     <div class="search-bar">
                         <input type="text" placeholder="Search...">
                     </div>
+                    
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" >Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="menstrual-health.html" >Learn</a></li>
+                        <li><a href="track-period.html" class="active">Track My Period</a></li>
+                        <li><a href="setting.html" class="btn">Settings</a></li>
+                    </ul>
                 </nav>
-            </header>
-            <h1>Learn About Menstrual Health</h1>
-        <h1>Menstrual Health Tracker & Gyno Connect</h1>
+        <h1 class="lean-title">Menstrual Health Tracker & Gynecologist Connect</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#track-period">Track Period</a></li>
-            <li><a href="#symptoms">Symptoms</a></li>
-            <li><a href="#predict">Predict Next Period</a></li>
-            <li><a href="#gyno-connect">Connect with Gynecologist</a></li>
-        </ul>
-    </nav>
     <div class="container">
         <main>
             <section id="track-period">
@@ -214,7 +235,7 @@
             </section>
             <section id="symptoms">
                 <h2>Track Symptoms</h2>
-                <form id="symptom-form">
+                <form id="symptom-form" >
                     <label for="symptom-date">Date:</label>
                     <input type="date" id="symptom-date" required>
                     <label for="symptom-type">Symptom:</label>
