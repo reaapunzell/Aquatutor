@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn About Menstrual Health</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Princess Care</title>
     <style>
         :root {
             --primary-color: #ff69b4;
@@ -19,7 +25,9 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: "PT Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
@@ -48,8 +56,13 @@
 
         nav ul li {
             display: inline;
+            margin-left: 20px;
+            font-size:30px;
         }
 
+        .active{
+            color:#ff69b4;
+        }
         nav ul li a {
             color: gray;
             text-decoration: none;
@@ -60,10 +73,19 @@
             margin-top: 10px;
         }
 
-        nav .search-bar input {
-            padding: 5px;
-            border: none;
-            border-radius: 5px;
+        .search-bar input {
+            width: 500px; 
+  height: 52px; 
+  padding-left: 52px; 
+  padding-right: 20px; 
+  font-family: Inter; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  background: #F3F4F6FF; /* neutral-200 */
+  border-radius: 8px; /* border-xl */
+  border-width: 0px; 
+  outline: none; 
         }
 
         h1, h2, h3 {
@@ -88,13 +110,14 @@
             margin-bottom: 1rem;
         }
 
-        .logo{
-            width: 529px; 
-            height: 290px; 
+        h1{
+            font-size:40px;
         }
 
         .slogan{
-            font-size: 18px;
+            font-size: 38px;
+            font-family: Alex Brush;
+            color:#E21E80;
 
         }
 
@@ -103,11 +126,33 @@
             padding: 2rem;
             border-radius: 10px;
             margin-bottom: 2rem;
+            font-size: 30px;
+           
         }
 
         .container-princess-hamper{
+            margin-top:30px;
             box-shadow: 0px 0px 1px #a8a8a8, 0px 0px 2px #808080; 
+            width: 713px; 
+            height: 502px; 
+            
+        }
 
+        .container-princess-hamper p {
+            font-size: 20px;
+        }
+
+        .container-princess-hamper h3{
+            font-size: 40px;
+        }
+
+        .princess-hamper-info{
+            display:flex;
+            justify-content: space-between;
+        }
+        .princess-hamper-info img{
+            width: 340px; 
+            height: 375px; 
         }
 
             button{
@@ -230,14 +275,13 @@
     </header>
 
     <nav>
-        <h1>Menstrual Health Hub</h1>
         <ul>
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="your-cycle.html" class="active">Your Cycle</a></li>
+            <li><a href="shop.html">Products</a></li>
+            <li><a href="your-cycle.html" >Your Cycle</a></li>
             <li><a href="about-us.html" class="btn">About Us</a></li>
             <li><a href="contact-us.html" class="btn">Contact Us</a></li>
-            </li><a href="setting.html" class="btn">Settings</a></li>
+            <li><a href="setting.html" class="btn">Settings</a></li>
         </ul>
        
     </nav>
@@ -251,33 +295,27 @@
             <br>
             <p>Improving access to menstrual health products by allowing women (and anyone else) to buy sanitary product hampers for women in need while also purchasing your own sanitary products</p>
             <div class="cta-buttons">
-                <a href="learnPeriods.html" class="btn">Learn More</a>
-                <a href="login.html" class="btn">Get Started</a>
+                <a href="about-us.html" class="btn">Learn More</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Introduction -->
-    <section id="introduction">
-        <div class="container">
-            <h2>Welcome to Menstrual Health Hub</h2>
-            <p>We aim to educate, support, and empower individuals with knowledge about menstrual health and hygiene.</p>
-            <p>Menstrual health is crucial for overall well-being. We provide resources, articles, and support to help you understand and manage your menstrual health effectively.</p>
         </div>
     </section>
 
     <section id="princess-hamper">
         <div class="container-princess-hamper">
             <h3>Princess Hamper</h3>
+
             <p>When you order one of our products, 
                 a % of your purchase goes towards buying
                 a girl in need a princess hamper</p>
+                <div class="princess-hamper-info">
                 <ul>
                     <li> x 16 Sanitary Pads</li>
                     <li> x 10 Panty Liners</li>
                     <li> x 1 100ml Hand Sanitizer</li>
                     <li> x 3 Reusable Sanitary Pads</li>
                 </ul>
+                <img src="src/images/hamper graphic.png" alt="Princess Hamper graphic">
+            </div>
                 <button> Order our Products</button>
                 <button> Donate a Princess Hamper</button>
         </div>
@@ -333,8 +371,8 @@
         <div class="container">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: support@menstrualhealthhub.com</p>
-                <p>Phone: +123 456 7890</p>
+                <p>Email: support@princesscare.co.za</p>
+                <p>Phone: +o11 456 7890</p>
                 <p>Address: 123 Wellness Street, Health City</p>
             </div>
             <div class="footer-section">
