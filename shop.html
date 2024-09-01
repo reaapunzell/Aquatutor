@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn About Menstrual Health</title>
     <style>
-        :root {
+         :root {
             --primary-color: #ff69b4;
             --secondary-color: #f8b3d2;
             --text-color: #333;
@@ -19,7 +19,9 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: "PT Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
             line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
@@ -48,8 +50,13 @@
 
         nav ul li {
             display: inline;
+            margin-left: 20px;
+            font-size:30px;
         }
 
+        .active{
+            color:#ff69b4;
+        }
         nav ul li a {
             color: gray;
             text-decoration: none;
@@ -60,12 +67,20 @@
             margin-top: 10px;
         }
 
-        nav .search-bar input {
-            padding: 5px;
-            border: none;
-            border-radius: 5px;
+        .search-bar input {
+            width: 500px; 
+  height: 52px; 
+  padding-left: 52px; 
+  padding-right: 20px; 
+  font-family: Inter; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  background: #F3F4F6FF; /* neutral-200 */
+  border-radius: 8px; /* border-xl */
+  border-width: 0px; 
+  outline: none; 
         }
-
         h1, h2, h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
@@ -312,6 +327,11 @@ footer form button:hover {
             margin-bottom: 20px;
         }
 
+        .gallery{
+            display:flex;
+            justify-content: center;
+        }
+
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -375,12 +395,12 @@ footer form button:hover {
 
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html" >Home</a></li>
             <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="your-cycle.html" class="active">Your Cycle</a></li>
-            <li><a href="about-us.html" class="btn">About Us</a></li>
-            <li><a href="contact-us.html" class="btn">Contact Us</a></li>
-            <li><a href="setting.html" class="btn">Settings</a></li>
+            <li><a href="yourcycle.html" >Your Cycle</a></li>
+            <li><a href="about-us.html" >About Us</a></li>
+            <li><a href="contact-us.html" >Contact Us</a></li>
+            <li><a href="setting.html" >Settings</a></li>
         </ul>
        
     </nav>

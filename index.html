@@ -130,12 +130,15 @@
            
         }
 
+        .princess-hamper{
+            display:flex;
+            justify-content: center;
+        }
+
         .container-princess-hamper{
             margin-top:30px;
-            box-shadow: 0px 0px 1px #a8a8a8, 0px 0px 2px #808080; 
-            width: 713px; 
-            height: 502px; 
-            
+            width: auto;
+           
         }
 
         .container-princess-hamper p {
@@ -170,8 +173,8 @@
 
         .product-card{
             margin-left: 10px;
-            width: 191px; 
-            height: 280px; 
+            width: 300px; 
+            height: 350px; 
             background: #FFFFFFFF; /* white */
             border-radius: 4px;
             border-color: gray;
@@ -183,8 +186,12 @@
         height: 146px; 
     }
 
+    h2{
+        text-align: center;
+    }
     .our-products{
         display:flex;
+        justify-content: center;
     }
 
     .see-more{
@@ -212,6 +219,8 @@
         .testimonial, .news-item, .interactive-item {
             margin-bottom: 20px;
         }
+
+
 
         footer {
             background-color: var(--primary-color);
@@ -300,7 +309,7 @@
         </div>
     </section>
 
-    <section id="princess-hamper">
+    <section id="princess-hamper" class="princess-hamper"">
         <div class="container-princess-hamper">
             <h3>Princess Hamper</h3>
 
@@ -321,9 +330,10 @@
         </div>
     </section>
 
-    <section id="Our-products">
+    <section id="our-products">
         <h2>Our Products</h2>
         <div class="our-products">
+            
         <div class="product-card">
             <img class="product-image" src="src\images\always pad pack.jpeg" alt="Always pad pack">
             <h3>Product Title</h3>
@@ -346,25 +356,6 @@
     </div>
     </section>
 
-    <!-- Interactive Elements -->
-    <section id="interactive">
-        <div class="container horizontal-sections">
-            <div class="section">
-                <h2>Engage with Us</h2>
-                <div class="interactive-item">
-                    <h3>Take our Menstrual Health Quiz</h3>
-                    <p>Test your knowledge about menstrual health and learn more.</p>
-                </div>
-            </div>
-            <div class="section">
-                <h2>Period Tracker</h2>
-                <div class="interactive-item">
-                    <h3>Use Our Period Tracker</h3>
-                    <p>Track your cycle and get personalized tips and reminders.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer id="contact">
