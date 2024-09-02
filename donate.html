@@ -36,12 +36,12 @@
             padding: 20px;
         }
 
-        /* header {
+        header {
             background-color: var(--primary-color);
             color: white;
             text-align: center;
             padding: 1.5rem;
-        } */
+        } 
 
         header h1 {
             font-family: "Alex Brush", bold;
@@ -497,37 +497,98 @@
         <p>Our mission is to break the silence around menstruation and empower girls and women with the resources and education needed to manage their periods with dignity and comfort.</pp>
         
         <h2>What We Do</h2>
-        <p>Raise Awareness: We challenge menstrual taboos through education and advocacy.
-        Facilitate Donations: We collect and distribute sanitary products to underserved communities.
-        Provide Education: We offer programs on menstrual hygiene management and self-care.
-        Advocate for Change: We work to ensure policies support menstrual health and access to products.
-        Get Involved
-        Partner with Us: Join our network to support menstrual health initiatives.
-        Donate: Contribute sanitary products to those in need.
-        Volunteer: Support our programs and campaigns.
-        Spread the Word: Help us promote menstrual health and hygiene globally.
-        Join Princess Care in creating a world where every girl and woman can manage her period with dignity. Together, we can make a difference.
+        <p>
+        
+        Raise Awareness:We challenge menstrual taboos through education and advocacy.</li></br>
+        Facilitate Donations:We collect and distribute sanitary products to underserved communities.</br>
+        Advocate for Change:We work to ensure policies support menstrual health and access to products.</br></br>
+        <h2>Get Involved</h2>
+        
+        Partner with Us:Join our network to support menstrual health initiatives.</br>
+        Donate:Contribute sanitary products to those in need.</br>
+        Volunteer:Support our programs and campaigns.</br>
+        Spread the Word: Help us promote menstrual health and hygiene globally.</br></br>
+        
+        <h1>Join Princess Care in creating a world where every girl and woman can manage her period with dignity. Together, we can make a difference.</h1>
+        
     </p>
     </section>
 
-    <section class="section" id="donate">
+    <!-- <section class="section" id="donate">
         <h3>Donate Sanitary Products</h3>
         <p>Your donation can help provide pads, pantyliners, wipes, and hand washes to those in need. Fill out the form below to get involved.</p>
         <form class="donation-form" onsubmit="handleSubmit(event)">
             <input type="text" id="orgName" placeholder="Organization/NGO Name" required>
             <input type="email" id="email" placeholder="Contact Email" required>
             <input type="text" id="contactPerson" placeholder="Contact Person" required>
-            <select id="productType" required>
-                <option value="">Select Product Type</option>
-                <option value="pads">Pads</option>
-                <option value="pantyliners">Pantyliners</option>
-                <option value="wipes">Wipes</option>
-                <option value="handWashes">Hand Washes</option>
-            </select>
-            <textarea id="message" rows="5" placeholder="Message or Additional Information"></textarea>
-            <button type="submit">Submit Donation</button>
-        </form>
-    </section>
+            <section class="section" id="donate">
+                 <h3>Donate Sanitary Products</h3>
+                <p>Your donation can help provide essential sanitary products to those in need. Fill out the form below to contribute and make a difference in someone's life.</p>
+                  <form class="donation-form" onsubmit="handleSubmit(event)">
+                    <input type="text" id="orgName" placeholder="Organization/NGO Name" required>
+                    <input type="email" id="email" placeholder="Contact Email" required>
+                    <input type="text" id="contactPerson" placeholder="Contact Person" required> 
+                    
+                    <select id="productType" required>
+                        <option value="">Select Product Type</option>
+                        <option value="pads">Pads</option>
+                        <option value="pantyliners">Pantyliners</option>
+                        <option value="tampons">Tampons</option>
+                        <option value="menstrualcups">Menstrual Cups</option>
+                        <option value="PeriodUnderwear">Period Underwear</option>
+                        <option value="PeriodSponges">Period Sponges</option>
+                        <option value="MenstrualWipes">Menstrual Wipes</option>
+                        <option value="MaternityPads">Maternity Pads</option>
+                        <option value="handWashes">Hand Washes</option>
+                    </select> 
+                    
+                   <input type="number" id="quantity" placeholder="Number of Products to Donate" min="1" required>
+                    </br>
+                    <textarea id="message" rows="10" columns=""placeholder="Message or Additional Information"></textarea>
+                </br>
+                    <button type="submit">Submit Donation</button>
+                </form>
+            </section>
+             -->
+             <section class="section" id="donate">
+                <h3>Donate Sanitary Products</h3>
+                <p>Your donation can help provide pads, pantyliners, wipes, hand washes, and more to those in need. Fill out the form below to get involved.</p>
+                
+                <!-- Donation Form -->
+                <form class="donation-form" onsubmit="handleSubmit(event)">
+                    <input type="text" id="orgName" placeholder="Organization/NGO Name" required>
+                    <input type="email" id="email" placeholder="Contact Email" required>
+                    <input type="text" id="contactPerson" placeholder="Contact Person" required>
+            
+                    <!-- Product Selection and Quantity -->
+                    <div id="product-section">
+                        <div class="product-item">
+                            <select class="productType" required>
+                                <option value="">Select Product Type</option>
+                                <option value="pads">Pads</option>
+                                <option value="pantyliners">Pantyliners</option>
+                                <option value="tampons">Tampons</option>
+                                <option value="menstrualcups">Menstrual Cups</option>
+                                <option value="periodUnderwear">Period Underwear</option>
+                                <option value="periodSponges">Period Sponges</option>
+                                <option value="menstrualWipes">Menstrual Wipes</option>
+                                <option value="maternityPads">Maternity Pads</option>
+                                <option value="handWashes">Hand Washes</option>
+                            </select>
+                            <input type="number" class="productQuantity" placeholder="Quantity" min="1" required>
+                            <button type="button" class="remove-product" onclick="removeProduct(this)">Remove</button>
+                        </div>
+                    </div>
+            
+                    <!-- Add More Products Button -->
+                    <button type="button" onclick="addProduct()">Add Another Product</button>
+                    
+                    <!-- Message and Submit Button -->
+                    <textarea id="message" rows="5" placeholder="Message or Additional Information"></textarea>
+                    <button type="submit">Submit Donation</button>
+                </form>
+            </section>
+            
 
     <section class="educational-content" id="educational">
         <h3>Educational Resources</h3>
@@ -539,7 +600,7 @@
             <li>Breaking the Stigma Around Periods</li>
         </ol> 
         <section>
-        <h2>Click on the link to learn more</h2><a href="menstrual-health.html" >Learn</a>
+        <h2>Click on the link to learn more</h2><h2><a href="menstrual-health.html" >Learn</a></h2></h2>
         </section>
         <!-- <ul>
             <li><a href="#">Understanding Menstruation</a></li>
@@ -599,10 +660,60 @@
 
     function handleSubmit(event) {
         event.preventDefault();
+
+        // Gather all the data from the form
+        const orgName = document.getElementById('orgName').value;
+        const email = document.getElementById('email').value;
+        const contactPerson = document.getElementById('contactPerson').value;
+        const products = [];
+
+        // Collect all products and their quantities
+        document.querySelectorAll('.product-item').forEach(item => {
+            const productType = item.querySelector('.productType').value;
+            const productQuantity = item.querySelector('.productQuantity').value;
+            products.push({ type: productType, quantity: productQuantity });
+        });
+
+        const message = document.getElementById('message').value;
+
+        // Display a confirmation message
         alert('Thank you for your donation! We will contact you soon.');
+
+        // Optional: Here, you could send the collected data to a server or API
+    }
+
+    function addProduct() {
+        // Create a new product input row
+        const productSection = document.getElementById('product-section');
+        const newProductItem = document.createElement('div');
+        newProductItem.classList.add('product-item');
+
+        newProductItem.innerHTML = `
+            <select class="productType" required>
+                <option value="">Select Product Type</option>
+                <option value="pads">Pads</option>
+                <option value="pantyliners">Pantyliners</option>
+                <option value="tampons">Tampons</option>
+                <option value="menstrualcups">Menstrual Cups</option>
+                <option value="periodUnderwear">Period Underwear</option>
+                <option value="periodSponges">Period Sponges</option>
+                <option value="menstrualWipes">Menstrual Wipes</option>
+                <option value="maternityPads">Maternity Pads</option>
+                <option value="handWashes">Hand Washes</option>
+            </select>
+            <input type="number" class="productQuantity" placeholder="Quantity" min="1" required>
+            <button type="button" class="remove-product" onclick="removeProduct(this)">Remove</button>
+        `;
+
+        // Append the new row to the product section
+        productSection.appendChild(newProductItem);
+    }
+
+    function removeProduct(button) {
+        // Remove the selected product row
+        button.parentElement.remove();
     }
 </script>
-
 </body>
-
+</html>
 
