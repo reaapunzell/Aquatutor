@@ -1,4 +1,4 @@
-<!-- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,8 +270,10 @@
                 <li>
                     <div>
                         <h4>Languages</h4>
-                        <p>Manage which -->
+                        
     
+                             
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -361,6 +363,7 @@
 
         .settings-menu ul {
             list-style: none;
+            padding: 0;
         }
 
         .settings-menu ul li {
@@ -463,7 +466,7 @@
             <li><a href="menstrual-health.html">Learn</a></li>
             <li><a href="track-period.html">Track My Period</a></li>
             <li><a href="donate.html">Support Her Initiative</a></li>
-            <li><a href="setting.html" class="active">Settings</a></li>
+            <li><a href="settings.html" class="active">Settings</a></li>
         </ul>
     </nav>
 
@@ -543,4 +546,47 @@
                 <li>
                     <div>
                         <h4>Languages</h4>
-                        <p>Manage which
+                        <p>Select your preferred language</p>
+                    </div>
+                    <img src="src/images/Settings arrow.png" alt="Arrow Icon" class="arrow-icon">
+                </li>
+            </ul>
+        </div>
+
+        <div class="settings-section" id="password-security" style="display:none">
+            <h2>Password & Security</h2>
+            <div class="update-password">
+                <form>
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password">
+                    <label for="confirm-password">Confirm New Password</label>
+                    <input type="password" id="confirm-password">
+                    <button type="submit">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showSection(id) {
+            // Hide all sections
+            document.querySelectorAll('.settings-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(id).style.display = 'block';
+
+            // Update active class in settings menu
+            document.querySelectorAll('.settings-menu ul li').forEach(li => {
+                li.classList.remove('active');
+            });
+            document.querySelector(`.settings-menu ul li[onclick="showSection('${id}')"]`).classList.add('active');
+        }
+
+        // Initialize the first section as active
+        showSection('account-settings');
+    </script>
+</body>
+</html>
