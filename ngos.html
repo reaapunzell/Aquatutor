@@ -1,0 +1,363 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Menstrual Health & Hygiene</title>
+    <style>
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8b3d2;
+            --highlight-color: #E21E80;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PT Sans", sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        header h1 {
+            font-family: "Alex Brush", cursive;
+            font-size: 4rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 1.8rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #ff69b4 0%, #f8b3d2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons .btn {
+            background-color: var(--highlight-color);
+            color: #fff;
+            padding: 15px 30px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .cta-buttons .btn:hover {
+            background-color: #d95787;
+        }
+
+        .section {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .donation-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .donation-form input, .donation-form select, .donation-form textarea {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .donation-form button {
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .donation-form button:hover {
+            background-color: #d95787;
+        }
+
+        .educational-content, .testimonials, .success-stories {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .educational-content h3, .testimonials h3, .success-stories h3 {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+        }
+
+        .testimonial, .success-story {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Princess Care - Menstrual Health & Hygiene</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#educational">Learn</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <section class="hero-section" id="home">
+        <h2>Empowering Girls and Women with Menstrual Hygiene</h2>
+        <p>Together, we can make a difference by ensuring access to sanitary products for every girl and woman in need.</p>
+        <div class="cta-buttons">
+            <button class="btn" onclick="scrollToDonate()">Donate Now</button>
+            <button class="btn" onclick="scrollToContact()">Join Us</button>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h3>About Us</h3>
+        <p>Princess Care is committed to promoting menstrual health and hygiene for girls and women across the globe. We partner with NGOs, organizations, communities, and companies to ensure that no girl or woman is left without access to essential sanitary products.</p>
+        <p>Our mission is to break the silence around menstruation and empower girls and women with the resources and education they need to manage their periods with dignity and comfort.</p>
+    </section>
+
+    <section class="section" id="donate">
+        <h3>Donate Sanitary Products</h3>
+        <p>Your donation can help provide pads, pantyliners, wipes, and hand washes to those in need. Fill out the form below to get involved.</p>
+        <form class="donation-form" onsubmit="handleSubmit(event)">
+            <input type="text" id="orgName" placeholder="Organization/NGO Name" required>
+            <input type="email" id="email" placeholder="Contact Email" required>
+            <input type="text" id="contactPerson" placeholder="Contact Person" required>
+            <select id="productType" required>
+                <option value="">Select Product Type</option>
+                <option value="pads">Pads</option>
+                <option value="pantyliners">Pantyliners</option>
+                <option value="wipes">Wipes</option>
+                <option value="handWashes">Hand Washes</option>
+            </select>
+            <textarea id="message" rows="5" placeholder="Message or Additional Information"></textarea>
+            <button type="submit">Submit Donation</button>
+        </form>
+    </section>
+
+    <section class="educational-content" id="educational">
+        <h3>Educational Resources</h3>
+        <p>Menstrual health education is crucial for breaking the stigma and empowering girls and women to manage their periods confidently. Explore our educational resources on menstrual hygiene, health tips, and more.</p>
+        <ul>
+            <li><a href="#">Understanding Menstruation</a></li>
+            <li><a href="#">Tips for Managing Menstrual Pain</a></li>
+            <li><a href="#">Sanitary Products: Types and Usage</a></li>
+            <li><a href="#">Breaking the Stigma Around Periods</a></li>
+        </ul>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <h3>What Our Partners Say</h3>
+        <div class="testimonial">
+            <p>"Princess Care has been a beacon of hope for so many young girls in our community. Their commitment to menstrual hygiene is unwavering, and their support has been invaluable." - <strong>Grace Foundation</strong></p>
+        </div>
+        <div class="testimonial">
+            <p>"Thanks to Princess Care, we have been able to distribute sanitary products to over 500 women in need. Their dedication to this cause is inspiring." - <strong>Community Health Org</strong></p>
+        </div>
+    </section>
+
+    <section class="success-stories" id="success-stories">
+        <h3>Success Stories</h3>
+        <div class="success-story">
+            <p><strong>Empowering Girls in Rural Areas:</strong> Through our partnership with local NGOs, we've reached remote areas where access to sanitary products is limited, providing essential supplies and education on menstrual health.</p>
+        </div>
+        <div class="success-story">
+            <p><strong>Breaking Taboos in Urban Communities:</strong> Our awareness campaigns and workshops have helped urban communities understand the importance of menstrual hygiene, breaking down barriers and fostering open discussions.</p>
+        </div>
+    </section>
+</div>
+
+<footer id="contact">
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@princesscare.org</p>
+        <p>Phone: +1-234-567-8900</p>
+    </div>
+    <div class="footer-section">
+        <h3>Follow Us</h3>
+        <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+    </div>
+    <div class="footer-section">
+        <form>
+            <input type="email" placeholder="Subscribe to our newsletter">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</footer>
+
+<script>
+    function scrollToDonate() {
+        document.getElementById('donate').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function scrollToContact() {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        alert('Thank you for your donation! We will contact you soon.');
+    }
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Period Partners</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Period Partners</h1>
+        <p>Connecting Organizations to Help Women and Girls in Need</p>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to connecting NGOs, organizations, communities, and companies with charities to provide essential sanitary products to women and girls. Our mission is to ensure that every woman and girl has access to the menstrual products they need, promoting dignity and health for all.</p>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Organizations sign up and pledge to donate sanitary products.</li>
+            <li>We connect organizations with charities that need these products.</li>
+            <li>Together, we help distribute these products to women and girls in need.</li>
+        </ol>
+    </section>
+
+    <section id="get-involved">
+        <h2>Get Involved</h2>
+        <p>Are you an organization, NGO, or community group interested in helping? Fill out the form below to get started!</p>
+        <form id="donationForm">
+            <label for="orgName">Organization Name:</label>
+            <input type="text" id="orgName" name="orgName" required>
+
+            <label for="contactPerson">Contact Person:</label>
+            <input type="text" id="contactPerson" name="contactPerson" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="productType">Type of Products to Donate:</label>
+            <select id="productType" name="productType" required>
+                <option value="pads">Pads</option>
+                <option value="pantyliners">Pantyliners</option>
+                <option value="wipes">Wipes</option>
+                <option value="handwash">Hand Wash</option>
+                <option value="all">All of the Above</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Period Partners. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
