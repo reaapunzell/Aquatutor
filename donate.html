@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>Menstrual Health & Hygiene</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Princess Care</title>
     <style>
-        :root {
+          :root {
             --primary-color: #ff69b4;
             --secondary-color: #f8b3d2;
-            --highlight-color: #E21E80;
             --text-color: #333;
             --background-color: #fff;
         }
@@ -25,7 +27,8 @@
         body {
             font-family: "PT Sans", sans-serif;
             font-weight: 400;
-            line-height: 1.8;
+            font-style: normal;
+            line-height: 1.6;
             color: var(--text-color);
             background-color: var(--background-color);
         }
@@ -40,14 +43,12 @@
              background-color: var(--primary-color);  
             color: white;
             text-align: center;
-            padding: 1rem;
-        }  
+            padding: 1.5rem;
+        } 
 
-        header {
-             background-color: var(--primary-color); 
-            color: white;
-            text-align: horizontal;
-            padding: 1rem;
+        header h1 {
+            font-family: "Alex Brush", bold;
+            font-size: 4rem;
         }
 
         nav ul {
@@ -64,36 +65,12 @@
             font-size:30px;
         }
 
-         .active{
-            color:#ff69b4; 
-        }
         nav ul li a {
             color: gray;
             text-decoration: none;
             font-weight: bold;
         }
 
-        nav .search-bar {
-            margin-top: 10px;
-        }
-        .search-bar input {
-            width: 500px; 
-  height: 52px; 
-  padding-left: 52px; 
-  padding-right: 20px; 
-  font-family: Inter; 
-  font-size: 18px; 
-  line-height: 28px; 
-  font-weight: 400; 
-  background: #F3F4F6FF; /* neutral-200 */
-  border-radius: 8px; /* border-xl */
-  border-width: 0px; 
-  outline: none; 
-        }
-        h1, h2, h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
         nav ul li a:hover {
             color: var(--secondary-color);
         }
@@ -210,306 +187,26 @@
         }
     </style>
 </head> 
-<!-- <!DOCTYPE html>
-<html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Princess Care</title>
-    <style>
-        :root {
-            --primary-color: #ff69b4;
-            --secondary-color: #f8b3d2;
-            --text-color: #333;
-            --background-color: #fff;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "PT Sans", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: horizontal;
-            padding: 1rem;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-left: 20px;
-            font-size:30px;
-        }
-
-        .active{
-            color:#ff69b4;
-        }
-        nav ul li a {
-            color: gray;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav .search-bar {
-            margin-top: 10px;
-        }
-
-        .search-bar input {
-            width: 500px; 
-  height: 52px; 
-  padding-left: 52px; 
-  padding-right: 20px; 
-  font-size: 18px; 
-  line-height: 28px; 
-  font-weight: 400; 
-  background: #F3F4F6FF; /* neutral-200 */
-  border-radius: 8px; /* border-xl */
-  border-width: 0px; 
-  outline: none; 
-        }
-
-        h1, h2, h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        a{
-            text-decoration:none;
-            color:white
-        }
-
-        p{
-            font-size: 40px;
-        }
-        .horizontal-sections {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: space-between;
-        }
-
-        .section {
-            flex: 1;
-            min-width: 200px;
-            background-color: #f9f9f9;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
-        }
-
-        h1{
-            font-size:40px;
-        }
-
-        .slogan{
-            font-size: 70px;
-            font-family: Alex Brush;
-            color:#E21E80;
-
-        }
-
-        .hero-content {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            font-size: 30px;
-           
-        }
-
-        .princess-hamper{
-            display:flex;
-            justify-content: center;
-        }
-
-        .container-princess-hamper{
-            margin-top:30px;
-            width: auto;
-           
-        }
-
-        .container-princess-hamper p {
-            font-size: 20px;
-        }
-
-        .container-princess-hamper h3{
-            font-size: 40px;
-        }
-
-        .princess-hamper-info{
-            display:flex;
-            justify-content: space-between;
-        }
-        .princess-hamper-info img{
-            width: 340px; 
-            height: 375px; 
-        }
-
-            button{
-           height: 36px;
-           padding: 0 12px;
-           font-size:14px;
-           background:#FF69B4FF;
-           color: white;
-           border: none;
-           border-radius: 4px;
-           margin-bottom: 10px;
-           margin-left: 10px;
-           margin-top: 10px;
-        }
-
-        .product-card{
-            margin-left: 10px;
-            width: 300px; 
-            height: 350px; 
-            background: #FFFFFFFF; /* white */
-            border-radius: 4px;
-            border-color: gray;
-            box-shadow: 0px 0px 1px #a8a8a8, 0px 0px 2px #808080; 
-        }
-
-    .product-image{
-        width: 150px; 
-        height: 146px; 
-    }
-
-    h2{
-        text-align: center;
-    }
-    .our-products{
-        display:flex;
-        justify-content: center;
-    }
-
-    .see-more{
-        background-color: white;
-        color: #FF69B4FF;
-    }
-        .cta-buttons {
-            margin-top: 1rem;
-        }
-
-        .cta-buttons .btn {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 20px;
-            margin: 0 5px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-buttons .btn:hover {
-            background-color: #d95787;
-        }
-
-        .testimonial, .news-item, .interactive-item {
-            margin-bottom: 20px;
-        }
-
-
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 2rem;
-        }
-
-        .footer-section {
-            margin-bottom: 1rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .footer-section a:hover {
-            text-decoration: underline;
-        }
-
-        footer form input[type="email"] {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        footer form button {
-            padding: 10px 20px;
-            background-color: white;
-            color: var(--primary-color);
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        footer form button:hover {
-            background-color: #f8b3d2;
-        }
-
-        #interactive {
-            padding-bottom: 300px;
-        }
-    </style> -->
+    </style> 
 </head> 
 <body>
-    <header>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="menstrual-health.html" >Learn</a></li>
-            <li><a href="track-period.html">Track My Period</a></li>
-            <li><a href="donate.html">Support Her Initiative</a></li>
-            <li><a href="setting.html" class="btn">Settings</a></li>
-        </ul>
-    </nav>
+<header>
+ 
 
+<nav>
+    <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="menstrual-health.html" >Learn</a></li>
+        <li><a href="track-period.html">Track My Period</a></li>
+        <li><a href="donate.html">Support Her Initiative</a></li>
+        <li><a href="setting.html" >Settings</a></li>
+    </ul>
+</nav>
+
+<h1>Princess Care - Menstrual Health & Hygiene</h1>
+</header>
 
 <div class="container">
     <section class="hero-section" id="home">
@@ -517,11 +214,11 @@
         <p>Together, we can make a difference by ensuring access to sanitary products for every girl and woman in need.</p>
         <div class="cta-buttons">
             <button class="btn" onclick="scrollToDonate()">Donate Now</button>
-            <!-- <button class="btn" onclick="scrollToContact()">Join Us</button> -->
+            <button class="btn" onclick="scrollToContact()">Join Us</button>
         </div>
     </section>
 
-    <!-- <section class="section" id="about">
+    <section class="section" id="about">
         <h3>About Us</h3>
         <p>Princess Care is dedicated to promoting menstrual health and hygiene for girls and women worldwide. We partner with NGOs, organizations, communities, and companies to ensure everyone has access to essential sanitary products.</p>
 
@@ -543,7 +240,7 @@
         <h1>Join Princess Care in creating a world where every girl and woman can manage her period with dignity. Together, we can make a difference.</h1>
         
     </p>
-    </section> -->
+    </section>
 
     <!-- <section class="section" id="donate">
         <h3>Donate Sanitary Products</h3>
@@ -583,7 +280,7 @@
              -->
              <section class="section" id="donate">
                 <h3>Donate Sanitary Products</h3>
-                <p>Your donation can help provide pads, pantyliners, wipes, hand washes, and more to those in need. Fill out the form below to get involved.</p>
+                <p>Your donation can help provide pads, pantyliners, wipes, hand washes, and more to girls in need. Fill out the form below to get involved.</p>
                 
                 <!-- Donation Form -->
                 <form class="donation-form" onsubmit="handleSubmit(event)">
@@ -620,63 +317,28 @@
             </section>
             
 
-    <section class="educational-content" id="educational">
-        <h3>Educational Resources</h3>
-        <p>Menstrual health education is crucial for breaking the stigma and empowering girls and women to manage their periods confidently. Explore our educational resources on menstrual hygiene, health tips.</p>
-        <ol>
-            <li>Understanding Menstruation</li>
-            <li>Tips for Managing Menstrual Pain</li>
-            <li>Sanitary Products: Types and Usage</li>
-            <li>Breaking the Stigma Around Periods</li>
-        </ol> 
-        <section>
-        <h2>Click on the link to learn more</h2><h2><a href="menstrual-health.html" >Learn</a></h2></h2>
-        </section>
-        <!-- <ul>
-            <li><a href="#">Understanding Menstruation</a></li>
-            <li><a href="#">Tips for Managing Menstrual Pain</a></li>
-            <li><a href="#">Sanitary Products: Types and Usage</a></li>
-            <li><a href="#">Breaking the Stigma Around Periods</a></li>
-        </ul> -->
-    </section>
 
-    <section class="testimonials" id="testimonials">
-        <h3>What Our Partners Say</h3>
-        <div class="testimonial">
-            <p>"Princess Care has been a beacon of hope for so many young girls in our community. Their commitment to menstrual hygiene is unwavering, and their support has been invaluable." - <strong>Grace Foundation</strong></p>
-        </div>
-        <div class="testimonial">
-            <p>"Thanks to Princess Care, we have been able to distribute sanitary products to over 500 women in need. Their dedication to this cause is inspiring." - <strong>Community Health Org</strong></p>
-        </div>
-    </section>
-
-    <section class="success-stories" id="success-stories">
-        <h3>Success Stories</h3>
-        <div class="success-story">
-            <p><strong>Empowering Girls in Rural Areas:</strong> Through our partnership with local NGOs, we've reached remote areas where access to sanitary products is limited, providing essential supplies and education on menstrual health.</p>
-        </div>
-        <div class="success-story">
-            <p><strong>Breaking Taboos in Urban Communities:</strong> Our awareness campaigns and workshops have helped urban communities understand the importance of menstrual hygiene, breaking down barriers and fostering open discussions.</p>
-        </div>
-    </section>
-</div>
-
-<footer id="contact">
-    <div class="footer-section">
-        <h3>Contact Us</h3>
-        <p>Email: support@princesscare.org</p>
-        <p>Phone: +1-234-567-8900</p>
-    </div>
-    <div class="footer-section">
-        <h3>Follow Us</h3>
-        <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-    </div>
-    <div class="footer-section">
-        <form>
-            <input type="email" placeholder="Subscribe to our newsletter">
-            <button type="submit">Subscribe</button>
-        </form>
-    </div>
+            <footer id="contact">
+                <div class="container">
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <p>Email: support@princesscare.co.za</p>
+                        <p>Phone: +o11 456 7890</p>
+                        <p>Address: 123 Wellness Street, Health City</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Follow Us</h3>
+                        <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Newsletter Signup</h3>
+                        <form>
+                            <input type="email" placeholder="Enter your email">
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+  
 </footer>
 
 <script>

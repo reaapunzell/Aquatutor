@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,10 +270,8 @@
                 <li>
                     <div>
                         <h4>Languages</h4>
-                        
+                        <p>Manage which -->
     
-                             
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,7 +283,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Princess Care</title>
     <style>
-        :root {
+         :root {
             --primary-color: #ff69b4;
             --secondary-color: #f8b3d2;
             --text-color: #333;
@@ -300,27 +298,24 @@
 
         body {
             font-family: "PT Sans", sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
+            font-weight: 400;
+            font-style: normal;
             line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         header {
             background-color: var(--primary-color);
             color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .search-bar input {
-            width: 60%; 
-            height: 50px; 
-            padding: 0 20px; 
-            font-size: 18px;
-            border-radius: 8px;
-            border: 2px solid var(--secondary-color);
-            outline: none;
+            text-align: horizontal;
+            padding: 1rem;
         }
 
         nav ul {
@@ -328,25 +323,42 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 20px;
+            gap: 1rem;
         }
 
         nav ul li {
-            font-size: 20px;
+            display: inline;
+            margin-left: 20px;
+            font-size:30px;
         }
 
+        .active{
+            color:#ff69b4;
+        }
         nav ul li a {
             color: gray;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
         }
 
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: var(--primary-color);
+        nav .search-bar {
+            margin-top: 10px;
         }
+
+        .search-bar input {
+            width: 500px; 
+  height: 52px; 
+  padding-left: 52px; 
+  padding-right: 20px; 
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 400; 
+  background: #F3F4F6FF; /* neutral-200 */
+  border-radius: 8px; /* border-xl */
+  border-width: 0px; 
+  outline: none; 
+        }
+
 
         main {
             display: flex;
@@ -466,7 +478,7 @@
             <li><a href="menstrual-health.html">Learn</a></li>
             <li><a href="track-period.html">Track My Period</a></li>
             <li><a href="donate.html">Support Her Initiative</a></li>
-            <li><a href="settings.html" class="active">Settings</a></li>
+            <li><a href="setting.html" class="active">Settings</a></li>
         </ul>
     </nav>
 
