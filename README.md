@@ -1,6 +1,6 @@
 # Princess Care
 
-Built for the GirlCode Hackathon 2024: Harness the power of technology to address pressing global challenges outlined in the United Nations Sustainable Development Goals (SDGs).
+Built for the GirlCode Hackathon 2024: Harness the power of technology to address pressing global challenges outlined in the United Nations Sustainable Development Goals (SDGs). View the project [here](https://princesscare.netlify.app/) 
 ## About the Project
 
 ### Inspiration
